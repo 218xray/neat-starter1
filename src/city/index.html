@@ -16,8 +16,8 @@ path: city
   <h3>Emily Larson</h3>
   <h6>Mayor</h6>
 
-  {% if location.items %}
-      {% for item in location.items %}
+  {% if city_mayor.items %}
+      {% for item in city_mayor.items %}
       <p>{{ item.text }}</p>
       {% endfor %}
   {% endif %}

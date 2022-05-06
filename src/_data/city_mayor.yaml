@@ -1,4 +1,5 @@
 ---
 items:
-  - text: Emily Larson
+  - name: Emily Larson
+    position: Mayor
     url: "/emilylarson"

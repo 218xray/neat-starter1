@@ -6,11 +6,15 @@ path: city
 
 <div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
   <h1>
-    Welcome to
+    Welcome to {{ data}}
     <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
       {{title}}
     </strong>
   </h1>
+
+  {% for item in city_mayor.items %}
+  <h3>{{ item.text }}</h3>
+  {% endfor %}
 
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>

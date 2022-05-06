@@ -16,9 +16,12 @@ path: city
   <h3>Emily Larson</h3>
   <h6>Mayor</h6>
 
-  {% for item in city_mayor.items %}
-  <p>{{ items.text }}</p>
-  {% endfor %}
+  {% if location.items %}
+      {% for item in location.items %}
+      <p>{{ item.text }}</p>
+      {% endfor %}
+  {% endif %}
+
 
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>

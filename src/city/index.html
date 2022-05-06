@@ -5,21 +5,9 @@ path: city
 ---
 
 <div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-
-    {% if quicklinks.links %}
-
-    {% for item in quicklinks.links %}
-    <a href="{{item.url}}" target="_blank" class="p-5 border rounded border-gray-200 hover:border-purple-400">
-            <h3>{{item.title}}
-                →</h3>
-                    <p>{{item.desc}}</p>
-        </a>
-        {% endfor %}
-    {% endif %}
-
     
   <h1>
-    Welcome to {{ data}}
+    Welcome to {{ item.city_mayor }}
     <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
       {{title}}
     </strong>

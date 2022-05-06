@@ -5,20 +5,25 @@ path: city
 ---
 
 <div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+
+    {% if quicklinks.links %}
+
+    {% for item in quicklinks.links %}
+    <a href="{{item.url}}" target="_blank" class="p-5 border rounded border-gray-200 hover:border-purple-400">
+            <h3>{{item.title}}
+                →</h3>
+                    <p>{{item.desc}}</p>
+        </a>
+        {% endfor %}
+    {% endif %}
+
+    
   <h1>
     Welcome to {{ data}}
     <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
       {{title}}
     </strong>
   </h1>
-
-  {% if location.items %}
-  <ul class="dropdown-content absolute hidden text-gray-700 pt-1">
-      {% for item in location.items %}
-      <li><a class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-1 px-3 bg-white border transition min-w-32" href="{{ item.url }}">{{ item.text }}</a></li>
-      {% endfor %}
-  </ul>
-  {% endif %}
 
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>

@@ -4,7 +4,9 @@ title: City
 path: city
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">    
+<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+    {% for i in data.city_mayor %}
+    <p>{{i.data.text}}</p>
     
     <h1>
         Welcome to

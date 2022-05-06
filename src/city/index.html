@@ -5,9 +5,7 @@ path: city
 ---
 
 <div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-    {% for item in city_mayor.text %}
-    <p>{{item.data.text}}</p>
-    {% endfor %}
+
     <h1>
         Welcome to
         <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
@@ -17,6 +15,10 @@ path: city
   
   <h3>Emily Larson</h3>
   <h6>Mayor</h6>
+
+  {% for item in city_mayor.text %}
+  <p>{{ items.text }}</p>
+  {% endfor %}
 
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>

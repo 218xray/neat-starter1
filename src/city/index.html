@@ -12,9 +12,11 @@ path: city
     </strong>
   </h1>
 
+  {% if city_mayor.items %}
   {% for item in city_mayor.items %}
   <h3>{{ item.text }}</h3>
   {% endfor %}
+  {% endif %}
 
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>

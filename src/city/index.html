@@ -30,7 +30,7 @@ path: city
             {% for item in city_council.items %}
             <div class="col-lg-2 col-md-5 m-auto">
                 <div class="box text-center">
-                    <a href="{{ item.url }}">
+                    <a href="/city{{ item.url }}">
                         <h3>{{ item.name }}</h3>
                         <h5>{{ item.position }}</h5>
                         <picture>

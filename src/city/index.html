@@ -4,7 +4,7 @@ title: City
 path: city
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+<div class="container mx-auto lg:h-screen flex flex-col justify-flex items-center">
 
     <h1>
         Welcome to
@@ -23,25 +23,26 @@ path: city
   <picture>
     <img src="\static\img\officials\EmilyLarson.webp" alt="Emily Larson">
   </picture>
-  <p>HERE</p>
 </div>
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+<div class="container mx-auto lg:h-screen flex flex-col justify-flex items-center">
     {% if city_council.items %}
         {% for item in city_council.items %}
-        <div class="box">
-            <h3>{{ item.name }}</h3>
-            <h6>{{ item.position }}</h6>
-            <picture>
-                <img src="\static\img\officials\{{ item.raw }}.webp" alt="Emily Larson">
-            </picture>
+        <div class="col-lg-2 col-md-5">
+            <div class="box">
+                <h3>{{ item.name }}</h3>
+                <h6>{{ item.position }}</h6>
+                <picture>
+                    <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}">
+                </picture>
+            </div>
         </div>
         {% endfor %}
     {% endif %}
+</div>
 
 
-
-
+<div class="container mx-auto lg:h-screen flex flex-col justify-flex items-center">
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
     Starter Template. Get Started by editing.

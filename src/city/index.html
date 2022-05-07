@@ -4,42 +4,44 @@ title: City
 path: city
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-flex items-center">
+<section>
+    <div class="container mx-auto lg:h-screen flex flex-col items-center">
 
-    <h1>
-        Welcome to
-        <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-            {{title}}
-        </strong>
-    </h1>
-  
-  {% if city_mayor.items %}
-      {% for item in city_mayor.items %}
-      <h3>{{ item.name }}</h3>
-      <h6>{{ item.position }}</h6>
-      {% endfor %}
-  {% endif %}
-
-  <picture>
-    <img src="\static\img\officials\EmilyLarson.webp" alt="Emily Larson">
-  </picture>
-</div>
-
-<div class="container mx-auto lg:h-screen flex flex-row justify-flex items-center">
-    {% if city_council.items %}
-        {% for item in city_council.items %}
-        <div class="col-lg-2 col-md-5 m-auto">
-            <div class="box">
-                <h3>{{ item.name }}</h3>
-                <h6>{{ item.position }}</h6>
-                <picture>
-                    <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}">
-                </picture>
-            </div>
-        </div>
+        <h1>
+            Welcome to
+            <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                {{title}}
+            </strong>
+        </h1>
+    
+    {% if city_mayor.items %}
+        {% for item in city_mayor.items %}
+        <h3>{{ item.name }}</h3>
+        <h6>{{ item.position }}</h6>
         {% endfor %}
     {% endif %}
-</div>
+
+    <picture>
+        <img src="\static\img\officials\EmilyLarson.webp" alt="Emily Larson">
+    </picture>
+    </div>
+
+    <div class="container mx-auto lg:h-screen flex flex-row items-center">
+        {% if city_council.items %}
+            {% for item in city_council.items %}
+            <div class="col-lg-2 col-md-5 m-auto">
+                <div class="box text-center">
+                    <h3>{{ item.name }}</h3>
+                    <h6>{{ item.position }}</h6>
+                    <picture>
+                        <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border" width="160" height="225">
+                    </picture>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
 
 
 <!--div class="container mx-auto lg:h-screen flex flex-col justify-flex items-center">

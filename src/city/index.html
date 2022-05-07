@@ -17,7 +17,7 @@ path: city
     {% if city_mayor.items %}
         {% for item in city_mayor.items %}
         <h3>{{ item.name }}</h3>
-        <h6>{{ item.position }}</h6>
+        <h5>{{ item.position }}</h5>
         <picture>
             <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border">
         </picture>
@@ -25,13 +25,13 @@ path: city
     {% endif %}
     </div>
 
-    <div class="container mx-auto lg:h-auto flex flex-row items-center">
+    <div class="container mx-auto lg:h-1/2 flex flex-row items-center ">
         {% if city_council.items %}
             {% for item in city_council.items %}
             <div class="col-lg-2 col-md-5 m-auto">
                 <div class="box text-center">
                     <h3>{{ item.name }}</h3>
-                    <h6>{{ item.position }}</h6>
+                    <h5>{{ item.position }}</h5>
                     <picture>
                         <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border" height="225">
                     </picture>

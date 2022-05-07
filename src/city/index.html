@@ -29,8 +29,10 @@ path: city
 <div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
     {% if city_council.items %}
         {% for item in city_council.items %}
+        <div class="box">
             <h3>{{ item.name }}</h3>
             <h6>{{ item.position }}</h6>
+        </div>
         {% endfor %}
     {% endif %}
 

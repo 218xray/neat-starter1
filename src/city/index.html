@@ -30,12 +30,13 @@ path: city
             {% for item in city_council.items %}
             <div class="col-lg-2 col-md-5 m-auto">
                 <div class="box text-center">
-                    <a href="{{ item.url }}">{{ item.text }}</a>
-                    <h3>{{ item.name }}</h3>
-                    <h5>{{ item.position }}</h5>
-                    <picture>
-                        <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border aspect-71/1" height="225">
-                    </picture>
+                    <a href="{{ item.url }}">
+                        <h3>{{ item.name }}</h3>
+                        <h5>{{ item.position }}</h5>
+                        <picture>
+                            <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border" height="225">
+                        </picture>
+                    </a>
                 </div>
             </div>
             {% endfor %}

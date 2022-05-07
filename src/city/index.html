@@ -25,10 +25,10 @@ path: city
   </picture>
 </div>
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-flex items-center">
+<div class="container mx-auto lg:h-screen flex flex-row justify-flex items-center">
     {% if city_council.items %}
         {% for item in city_council.items %}
-        <div class="col-lg-2 col-md-5">
+        <div class="col-lg-2 col-md-5 m-auto">
             <div class="box">
                 <h3>{{ item.name }}</h3>
                 <h6>{{ item.position }}</h6>
@@ -42,11 +42,11 @@ path: city
 </div>
 
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-flex items-center">
+<!--div class="container mx-auto lg:h-screen flex flex-col justify-flex items-center">
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
     Starter Template. Get Started by editing.
     <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
   </p>
 
-</div>
+</div-->

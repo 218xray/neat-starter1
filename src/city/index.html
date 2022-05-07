@@ -18,12 +18,11 @@ path: city
         {% for item in city_mayor.items %}
         <h3>{{ item.name }}</h3>
         <h6>{{ item.position }}</h6>
+        <picture>
+            <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border">
+        </picture>
         {% endfor %}
     {% endif %}
-
-    <picture>
-        <img src="\static\img\officials\EmilyLarson.webp" alt="Emily Larson">
-    </picture>
     </div>
 
     <div class="container mx-auto lg:h-auto flex flex-row items-center">
@@ -33,6 +32,22 @@ path: city
                 <div class="box text-center">
                     <h3>{{ item.name }}</h3>
                     <h6>{{ item.position }}</h6>
+                    <picture>
+                        <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border" height="225">
+                    </picture>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="container mx-auto lg:h-auto flex flex-row items-center">
+        <h4>City Councilor: At-Large</h4>
+        {% if city_councilatlarge.items %}
+            {% for item in city_councilatlarge.items %}
+            <div class="col-lg-2 col-md-5 m-auto">
+                <div class="box text-center">
+                    <h3>{{ item.name }}</h3>
                     <picture>
                         <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border" height="225">
                     </picture>

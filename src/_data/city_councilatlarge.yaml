@@ -1,10 +1,14 @@
 ---
 items:
-  - text: Zach Flipovich
+  - name: Zach Flipovich 
     url: "/ZachFlipovich"
-  - text: Arik Forsman
+    raw: ZachFlipovich
+  - name: Arik Forsman
     url: "/ArikForsman"
-  - text: Derek Medved
+    raw: ArikForsman
+  - name: Derek Medved
     url: "/DerekMedved"
-  - text: Terese Tomanek
+    raw: DerekMedved
+  - name: Terese Tomanek
     url: "/TereseTomanek"
+    raw: TereseTomanek

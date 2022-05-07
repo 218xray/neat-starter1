@@ -41,8 +41,8 @@ path: city
         {% endif %}
     </div>
 
-    <div>
-        <h4>City Councilor: At-Large</h4>
+    <div class="containor mx-auto flex flex-row items-center">
+        <h2>City Councilor: At-Large</h2>
         <div class="container mx-auto lg:h-auto flex flex-row items-center">
             {% if city_councilatlarge.items %}
                 {% for item in city_councilatlarge.items %}
@@ -50,7 +50,7 @@ path: city
                     <div class="box text-center">
                         <h3>{{ item.name }}</h3>
                         <picture>
-                            <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border" height="225px">
+                            <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border" height="225" width="auto">
                         </picture>
                     </div>
                 </div>

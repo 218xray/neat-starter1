@@ -20,9 +20,10 @@ path: city
       {% endfor %}
   {% endif %}
 
-  <img src="src\static\img\officials\EmilyLarson.webp" alt="Emily Larson">
+  <picture>
+    <img src="\static\img\officials\EmilyLarson.webp" alt="Emily Larson">
+  </picture>
   <p>HERE</p>
-  <img :src="src\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}">
 
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>

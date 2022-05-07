@@ -13,13 +13,11 @@ path: city
         </strong>
     </h1>
   
-  <h3>Emily Larson</h3>
-  <h6>Mayor</h6>
-
   {% if city_mayor.items %}
       {% for item in city_mayor.items %}
       <h3>{{ item.name }}</h3>
       <h6>{{ item.position }}</h6>
+      <img src="src\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}">
       {% endfor %}
   {% endif %}
 

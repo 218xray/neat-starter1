@@ -46,19 +46,17 @@ path: city
         {% endif %}
     </div>
 
-    <div class="containor mx-auto flex flex-col items-center">
+    <div class="container mx-auto lg:h-auto flex flex-row items-center">
         <h3>City Councilor: At-Large</h3>
         <div class="container mx-auto lg:h-auto flex flex-row items-center">
             {% if city_councilatlarge.items %}
                 {% for item in city_councilatlarge.items %}
                 <div class="col-lg-2 col-md-5 m-auto">
                     <div class="box text-center">
-                        <a href="/city{{ item.url }}">
-                            <h3>{{ item.name }}</h3>
-                            <picture>
-                                <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border" height="225" width="160">
-                            </picture>
-                        </a>
+                        <h3>{{ item.name }}</h3>
+                        <picture>
+                            <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border" height="225" width="160">
+                        </picture>
                     </div>
                 </div>
                 {% endfor %}

@@ -24,6 +24,18 @@ path: city
     <img src="\static\img\officials\EmilyLarson.webp" alt="Emily Larson">
   </picture>
   <p>HERE</p>
+</div>
+
+<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+    {% if city_council.items %}
+        {% for item in city_council.items %}
+            <h3>{{ item.name }}</h3>
+            <h6>{{ item.position }}</h6>
+        {% endfor %}
+    {% endif %}
+
+
+
 
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>

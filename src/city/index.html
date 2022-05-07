@@ -32,6 +32,9 @@ path: city
         <div class="box">
             <h3>{{ item.name }}</h3>
             <h6>{{ item.position }}</h6>
+            <picture>
+                <img src="\static\img\officials\{{ item.raw }}.webp" alt="Emily Larson">
+            </picture>
         </div>
         {% endfor %}
     {% endif %}

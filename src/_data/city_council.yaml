@@ -3,15 +3,20 @@ items:
   - name: Gary Anderson
     position: Council District 1
     url: "/GaryAnderson"
+    raw: GaryAnderson
   - name: Joel Sipress
     position: Council District 2
     url: "/JoelSipress"
+    raw: JoelSipress
   - name: Roz Randorf
     postion: Council District 3
     url: "/RozRandorf"
+    raw: RozRandorf
   - name: Renee Van Nett
     position: Council District 4
     url: "/ReneeVanNett"
+    raw: ReneeVanNett
   - name: Janet Kennedy
     position: Council District 5
     url: "/JanetKennedy"
+    raw: JanetKennedy

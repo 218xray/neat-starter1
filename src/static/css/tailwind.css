@@ -32,10 +32,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 20px;
   border: 0;
   background-color: #007bff;
+  color: white;
 }
 
 .btn-primary:hover {
-  color: #004b8d
+  background-color: #006fd0
   ;
 }
 

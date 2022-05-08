@@ -23,6 +23,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 24px;
 }
 
+.btn-primary {
+  border-radius: 4px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #111;
+}
+
+.btn {
+  @apply bg-blue-600 rounded
+}
+
 /*** Dropdown ***/
 .dropdown:hover > .dropdown-content {
 	display: block;

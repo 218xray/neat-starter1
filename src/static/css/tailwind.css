@@ -44,7 +44,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 2.5% 0
 }
 
-
+.source .h6 {
+  font-weight: bold;
+}
+.source .cite {
+  font-style: italic;
+  color: #007bff;
+}
 
 
 /*** Dropdown ***/

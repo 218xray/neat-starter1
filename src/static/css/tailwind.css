@@ -31,11 +31,16 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   padding: 10px 20px;
   border: 0;
-  background-color: #111;
+  background-color: #007bff;
 }
 
 .btn-primary:hover {
-  color: #007bff;
+  color: #004b8d
+  ;
+}
+
+.contact {
+  margin: 0 0 2.5% 0
 }
 
 
@@ -68,11 +73,11 @@ h1, h2, h3, h4, h5, h6 {
 /*****************************/
 
 h1 {
-  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+  @apply mb-3 text-4xl tracking-tighter text-center lg:text-7xl;
 }
 
 h3 {
-  @apply text-2xl font-bold mb-3;
+  @apply mb-3 text-2xl font-bold;
 }
 
 /* Syntax Highlighting*/

@@ -4,6 +4,10 @@
 
 /*Your Custom CSS Goes here*/
 
+.entry-content {
+  line-height: 24px;
+}
+
 .dropdown:hover > .dropdown-content {
 	display: block;
 }

@@ -4,10 +4,21 @@
 
 /*Your Custom CSS Goes here*/
 
+/*** GENERAL ***/
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+/*** OFFICIALS ***/
 .entry-content {
   line-height: 24px;
 }
 
+/*** Dropdown ***/
 .dropdown:hover > .dropdown-content {
 	display: block;
 }

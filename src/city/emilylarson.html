@@ -5,62 +5,42 @@ path: city
 ---
 
 <section>
-    <div class="container mx-auto lg:h-auto flex flex-col items-center">
 
-        <h1>
-            Welcome to
-            <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-                {{title}}
-            </strong>
-        </h1>
-    
-    {% if city_mayor.items %}
-        {% for item in city_mayor.items %}
-        <div class="box text-center">
-            <a href="/city{{ item.url }}">
-                <h3>{{ item.name }}</h3>
-                <h5>{{ item.position }}</h5>
+    <div class="row">
+        <div class="entry-content container mx-auto lg:h-auto flex flex-col items-center">
+            <p>Emily Larson was elected Mayor of Duluth in November 2015 with 72% of the vote.  She was inaugurated on January 4th, 2016.</p>
+            <p>Prior to becoming Mayor, Emily was President of the Duluth City Council, served as a commissioner on the Duluth Economic Development Authority and was the Council Conduit to Parks and Libraries.</p>
+            <p>Currently, Mayor Larson serves as a member of the Young Women’s Initiative of Minnesota, and sits on boards of the Great Lakes and St. Lawrence Cities Initiative and the Greater Minnesota Housing Fund.  As Mayor, her priorities include sustainable energy, increasing and improving our housing stock, addressing the opioid epidemic, developing a stable and reliable long-term streets funding plan, and continuing to grow Duluth’s robust and unique economy.</p>
+            <p>Emily earned an undergraduate degree from the College of St. Scholastica, A master’s degree from the University of Minnesota Duluth and is a graduate of Intermedia Arts Creative Community Leadership Institute.</p>
+            <p>She is an active trail runner and full-time admirer of Lake Superior.  Emily is married to Doug Zaun and together they have two sons.</p>
+        </div>
+
+        <div class="source">
+            <h6>Sources</h6>
+            <cite><a href="https://duluthmn.gov/mayor/" target="__blank" rel="noopener noreferrer">[1] https://duluthmn.gov/mayor</a></cite>
+            <cite><br><a href="https://larsonforduluth.com/" target="__blank" rel="noopener noreferrer">[2] https://larsonforduluth.com</a></cite>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="sidebar">
+            <!-- CONTACT -->
+            <div class="contact" style="text-align: center">
+                <h3 class="sidebar-title">Contact</h3>
                 <picture>
-                    <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border">
+                    <img src="\static\img\officials\EmilyLarson.webp" alt="Emily Larson" class="img-thumbnail">
                 </picture>
-            </a>
-        {% endfor %}
-    {% endif %}
-    </div>
-
-    <div class="entry-content container mx-auto lg:h-auto flex flex-row items-center">
-        <p>Emily Larson was elected Mayor of Duluth in November 2015 with 72% of the vote.  She was inaugurated on January 4th, 2016.</p>
-        <p>Prior to becoming Mayor, Emily was President of the Duluth City Council, served as a commissioner on the Duluth Economic Development Authority and was the Council Conduit to Parks and Libraries.</p>
-        <p>Currently, Mayor Larson serves as a member of the Young Women’s Initiative of Minnesota, and sits on boards of the Great Lakes and St. Lawrence Cities Initiative and the Greater Minnesota Housing Fund.  As Mayor, her priorities include sustainable energy, increasing and improving our housing stock, addressing the opioid epidemic, developing a stable and reliable long-term streets funding plan, and continuing to grow Duluth’s robust and unique economy.</p>
-        <p>Emily earned an undergraduate degree from the College of St. Scholastica, A master’s degree from the University of Minnesota Duluth and is a graduate of Intermedia Arts Creative Community Leadership Institute.</p>
-        <p>She is an active trail runner and full-time admirer of Lake Superior.  Emily is married to Doug Zaun and together they have two sons.</p>
-    </div>
-
-    <div class="source">
-        <h6>Sources</h6>
-        <cite><a href="https://duluthmn.gov/mayor/" target="__blank" rel="noopener noreferrer">[1] https://duluthmn.gov/mayor</a></cite>
-        <cite><br><a href="https://larsonforduluth.com/" target="__blank" rel="noopener noreferrer">[2] https://larsonforduluth.com</a></cite>
-    </div>
-
-    <div class="col-lg-4">
-        <div class="sidebar">
-          <!-- CONTACT -->
-          <div class="contact" style="text-align: center">
-            <h3 class="sidebar-title">Contact</h3>
-            <picture>
-                <img src="\static\img\officials\EmilyLarson.webp" alt="Emily Larson" class="img-thumbnail">
-            </picture>
-            <h6>Emily Larson</h6>
-            <h6>Mayor</h6>
-            <h6>City Hall, Room 422</h6>
-            <h6>411 West First Street</h6>
-            <h6>Duluth, MN 55802</h6>
-            <h6>218-730-5230</h6>
-            <a href="mailto:ELarson@DuluthMN.gov" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Email">Email</a>
-          </div>
-          <!-- TWITTER -->
-          <a class="twitter-timeline" height="400px" width="400px" data-theme="light" href="https://twitter.com/LarsonForDuluth?ref_src=twsrc%5Etfw">Tweets by LarsonForDuluth</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            
-        </div><!-- End sidebar -->
+                <h6>Emily Larson</h6>
+                <h6>Mayor</h6>
+                <h6>City Hall, Room 422</h6>
+                <h6>411 West First Street</h6>
+                <h6>Duluth, MN 55802</h6>
+                <h6>218-730-5230</h6>
+                <a href="mailto:ELarson@DuluthMN.gov" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Email">Email</a>
+            </div>
+            <!-- TWITTER -->
+            <a class="twitter-timeline" height="400px" width="400px" data-theme="light" href="https://twitter.com/LarsonForDuluth?ref_src=twsrc%5Etfw">Tweets by LarsonForDuluth</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            
+            </div><!-- End sidebar -->
+        </div>
     </div>
     
 </section>

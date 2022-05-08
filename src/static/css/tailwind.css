@@ -14,6 +14,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*** OFFICIALS ***/
+.entry {
+  padding: 2.5%;
+  margin: 0 0 5% 0;
+}
+
 .entry-content {
   line-height: 24px;
 }

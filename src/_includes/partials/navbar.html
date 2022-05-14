@@ -36,8 +36,15 @@
                 {% if location.items %}
                 <ul class="absolute hidden pt-1 text-gray-700 dropdown-content">
                     {% for item in location.items %}
-                    <li><a class="inline-block transition submenu" href="{{ item.url }}">{{ item.text }}</a></li>
+                    <li><a class="inline-block transition submenu text-ml" href="{{ item.url }}">{{ item.text }}</a></li>
                     {% endfor %}
+                    <!-- NEW -->
+                    {% if items === city %}
+                    <ul class="absolute hidden pt-1 text-gray-700 dropdown-content">
+                        <li><a class="inline-block transition submenu text-ml" href="{{ item.url }}">{{ item.text }}</a></li>
+                    </ul>
+                    {% endif %}
+
                 </ul>
                 {% endif %}
             </div>

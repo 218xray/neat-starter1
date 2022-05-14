@@ -37,6 +37,23 @@
                 <ul class="absolute hidden pt-1 text-gray-700 dropdown-content">
                     {% for item in location.items %}
                     <li><a class="inline-block px-3 py-1 text-gray-500 no-underline transition bg-white border text-ml hover:text-indigo-500 min-w-32" href="{{ item.url }}">{{ item.text }}</a></li>
+                    
+                    <ul class="absolute hidden pt-1 text-gray-700 dropdown-content">
+                        {% if item.text == city %}
+                        {% for item in city_mayor.items %}
+                        <li><a class="inline-block transition submenu" href="{{ item.url }}">{{ item.text }}</a></li>
+                        {% endfor %}
+
+                        {% for item in city_council.items %}
+                        <li><a class="inline-block transition submenu" href="{{ item.url }}">{{ item.text }}</a></li>
+                        {% endfor %}
+
+                        {% for item in city_councilatlarge.items %}
+                        <li><a class="inline-block transition submenu" href="{{ item.url }}">{{ item.text }}</a></li>
+                        {% endfor %}
+
+                            <span></span>
+
                     {% endfor %}
                 </ul>
                 {% endif %}

@@ -43,8 +43,6 @@
                         {% for item in city_mayor.items %}
                         <li><a class="inline-block transition submenu" href="{{ item.url }}">{{ item.text }}</a></li>
                         {% endfor %}
-
-                        {% else %}
                         
                         {% endif %}
 
@@ -58,7 +56,7 @@
                         {% endfor %}
                         -->
 
-                    <!--{% endfor %}-->
+                    {% endfor %}
                 </ul>
                 {% endif %}
             </div>

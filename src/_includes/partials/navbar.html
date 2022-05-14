@@ -35,13 +35,22 @@
                 </button>
                 <ul class="absolute hidden pt-1 text-gray-700 dropdown-content">
                     <li class="dropdown">
-                        <a class="block px-4 py-2 whitespace-no-wrap bg-gray-200 hover:bg-gray-400" href="#">Option 3 🠞</a>
+                        <a class="block px-4 py-2 whitespace-no-wrap bg-gray-200 hover:bg-gray-400" href="/city">City</a>
+                        {% if city_mayor.items %}
+
                         <ul class="absolute hidden pl-5 -mt-10 text-gray-700 dropdown-content">
-                            <li><a class="block px-4 py-2 whitespace-no-wrap bg-gray-200 rounded-t hover:bg-gray-400" href="#">Option 3-1</a>
-                            <li><a class="block px-4 py-2 whitespace-no-wrap bg-gray-200 rounded-t hover:bg-gray-400" href="#">Option 3-2</a>
+                            {% for item in city_mayor.items %}
+                            <li><a class="block px-4 py-2 whitespace-no-wrap bg-gray-200 rounded-t hover:bg-gray-400" href="{{ item.url }}">{{ item.text }}</a></li>
+
+                            <li><a class="block px-4 py-2 whitespace-no-wrap bg-gray-200 rounded-t hover:bg-gray-400" href="#">Option 3-2</a></li>
+
+                            {% endfor %}
                         </ul>
+
+                        {% endif %}
                     </li>
-                    <li><a class="block px-4 py-2 whitespace-no-wrap bg-gray-200 rounded-b hover:bg-gray-400" href="#">Option 4</a></li>
+                    <li><a class="block px-4 py-2 whitespace-no-wrap bg-gray-200 rounded-b hover:bg-gray-400" href="/coutny">County</a></li>
+                    <li><a class="block px-4 py-2 whitespace-no-wrap bg-gray-200 rounded-b hover:bg-gray-400" href="/state">State</a></li>
                 </ul>
             </div>
         </div>

@@ -40,13 +40,9 @@
                     <!-- NEW -->
                     {% if items === city %}
                     <li><a class="inline-block transition submenu text-ml" href="{{ item.url }}">{{ item.text }}</a></li>
-                    {% if city_mayor.items%}
                     <ul class="absolute hidden pt-1 text-gray-700 dropdown-content">
-                        {% for num in city_mayor.items %}
-                        <li><a class="inline-block transition submenu text-ml" href="{{ item.url }}">{{ num.text }}</a></li>
-                        {% endfor %}
+                        <li><a class="inline-block transition submenu text-ml" href="{{ item.url }}">{{ item.text }}</a></li>
                     </ul>
-                    {% endif %}
                     {% else %}
                     <li><a class="inline-block transition submenu text-ml" href="{{ item.url }}">{{ item.text }}</a></li>
                     {% endif %}

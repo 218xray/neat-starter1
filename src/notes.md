@@ -5,3 +5,7 @@
     {% endfor %}
     </ul>
 {% endif %}
+
+
+<li><a class="inline-block transition submenu text-ml" href="/county">County</a></li>
+<li><a class="inline-block transition submenu text-ml" href="/state">State</a></li>       

@@ -48,7 +48,11 @@
                             {% endfor %}
 
                             {% for item in city_councilatlarge.items %}
+                            {% if loop.last %}
+                            <li><a @click="isOpen = false" class="block px-4 py-2 whitespace-no-wrap bg-gray-200 rounded-b hover:bg-gray-400" href="{{ item.url }}">{{ item.name }}</a></li>
+                            {% else %}
                             <li><a @click="isOpen = false" class="block px-4 py-2 whitespace-no-wrap bg-gray-200 hover:bg-gray-400" href="{{ item.url }}">{{ item.name }}</a></li>
+                            {% endif %}
                             {% endfor %}
 
                         </ul>

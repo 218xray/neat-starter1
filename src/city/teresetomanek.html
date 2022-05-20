@@ -119,21 +119,55 @@ path: city
             </div> <!-- END SOCIALS -->
 
             <div class="flex endorsements"> <!-- ENDORSEMENTS -->
-                <div x-data="{ dropdownOpen: true }" class="relative">
-                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 bg-gray-800 rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
-                      <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                      </svg>
-                    </button>
-                
-                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 z-10 w-full h-full"></div>
-                
-                    <div x-show="dropdownOpen" class="absolute right-0 z-20 w-48 mt-2 overflow-hidden bg-white rounded-md shadow-xl">
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-800 border-b hover:bg-gray-200">small <span class="text-gray-600">(640x426)</span></a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-800 border-b hover:bg-gray-200">medium <span class="text-gray-600">(1920x1280)</span></a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-800 border-b hover:bg-gray-200">large <span class="text-gray-600">(2400x1600)</span></a>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="bg-white border border-t-0 border-l-0 border-r-0 border-gray-200 rounded-none accordion-item">
+                      <h2 class="mb-0 accordion-header" id="flush-headingOne">
+                        <button class="relative flex items-center w-full px-5 py-4 text-base text-left text-gray-800 transition bg-white border-0 rounded-none accordion-button focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                          aria-expanded="false" aria-controls="flush-collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="border-0 accordion-collapse collapse show"
+                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="px-5 py-4 accordion-body">Placeholder content for this accordion, which is intended to
+                          demonstrate
+                          the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                      </div>
                     </div>
-                  </div>              </div>
+                    <div class="bg-white border border-l-0 border-r-0 border-gray-200 rounded-none accordion-item">
+                      <h2 class="mb-0 accordion-header" id="flush-headingTwo">
+                        <button class="relative flex items-center w-full px-5 py-4 text-base text-left text-gray-800 transition bg-white border-0 rounded-none accordion-button collapsed focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                          aria-expanded="false" aria-controls="flush-collapseTwo">
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="border-0 accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="px-5 py-4 accordion-body">Placeholder content for this accordion, which is intended to
+                          demonstrate
+                          the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this
+                          being
+                          filled with some actual content.</div>
+                      </div>
+                    </div>
+                    <div class="bg-white border border-b-0 border-l-0 border-r-0 border-gray-200 rounded-none accordion-item">
+                      <h2 class="mb-0 accordion-header" id="flush-headingThree">
+                        <button class="relative flex items-center w-full px-5 py-4 text-base text-left text-gray-800 transition bg-white border-0 rounded-none accordion-button collapsed focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                          aria-expanded="false" aria-controls="flush-collapseThree">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="px-5 py-4 accordion-body">Placeholder content for this accordion, which is intended to
+                          demonstrate
+                          the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+                          happening here in terms of content, but just filling up the space to make it look, at least at first
+                          glance,
+                          a bit more representative of how this would look in a real-world application.</div>
+                      </div>
+                    </div>
+                  </div>
             
             </div>
         </div><!-- End sidebar -->

@@ -65,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 .source .cite {
   font-style: italic;
   color: #007bff;
+  padding: 0 0 5% 0;
 }
 
 .citation {
@@ -80,9 +81,16 @@ h1, h2, h3, h4, h5, h6 {
   align-content: center;
   align-items: center;
   justify-content: space-evenly;
-  margin: 5% 0 0 0;
+  margin: 5% 0 5% 0;
 }
 
+.endorsements {
+  padding: 2.5%;
+}
+
+.activity {
+  padding: 2.5%;
+}
 
 /*** Dropdown ***/
 .dropdown:hover > .dropdown-content {

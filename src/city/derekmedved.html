@@ -43,10 +43,10 @@ path: city
             
                     {% for item in citycouncil.items %}
                     <tr>
-                        <td x-text="item.name"></td>   
-                        <td x-text="item.position"></td>   
-                        <td x-text="item.url"></td>   
-                        <td x-text="item.raw"></td>   
+                        <td {{ item.name }}></td>   
+                        <td {{ item.position }}></td>   
+                        <td {{ item.url }}></td>   
+                        <td {{ item.raw }}></td>   
                     </tr>
                     {% endfor %}
                     </template>

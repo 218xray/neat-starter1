@@ -45,15 +45,9 @@ path: city
                     <tbody>
                         {% for item in garyanderson.items %}
                         <tr class="border-b hover:bg-gray-50">
-                            <td class="p-4">
-                                {{ items.file }}
-                            </td>
-                            <td class="p-4">
-                                {{ items.date }}
-                            </td>
-                            <td class="p-4">
-                                {{ items.title }}
-                            </td>
+                            <td class="p-4">{{ item.date }}</td>
+                            <td class="p-4">{{ item.file }}</td>
+                            <td class="p-4">{{ item.title }}</td>
                         </tr>
                         {% endfor %}
     

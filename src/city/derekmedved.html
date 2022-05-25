@@ -44,23 +44,9 @@ path: city
                         </tr>
                     </thead>
     
-                    <!--thead>
-                    <tr>
-                        <th @click="sort('name')">Name</th>
-                        <th @click="sort('age')">Age</th>
-                        <th @click="sort('breed')">Breed</th>
-                        <th @click="sort('gender')">Gender</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <template x-if="!cats">
-                        <tr><td colspan="4"><i>Loading...</i></td></tr>
-                    </template-->
-            
-
                     {% for item in city_council.items %}
-                    <tbody>
-                    <tr class="border-b hover:bg-gray-50 h-12">
+                    <tbody class="h-12">
+                    <tr class="border-b hover:bg-gray-50">
                         <td> {{ item.name }} </td>   
                         <td> {{ item.position }} </td>   
                         <td> {{ item.url }} </td>   
@@ -70,12 +56,6 @@ path: city
                     </tbody>
                 </table>
             </div>        
-            
-            <div class="container flex justify-center p-1">
-                <button @click="previousPage">Previous</button> <button @click="nextPage">Next</button>
-            </div>
-
-
 
         </div>
 

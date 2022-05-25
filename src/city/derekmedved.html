@@ -27,6 +27,7 @@ path: city
             </div>
 
             <div class="container flex" x-data="catData">
+                {% set i = 0 %}
                 <table class="table-auto w-full">
                     <thead class="border-b">
                         <tr class="bg-gray-100 table-header">
@@ -65,26 +66,15 @@ path: city
                         <td> {{ item.raw }} </td>   
                     </tr>
                     {% endfor %}
-                    <tr class="border-b hover:bg-gray-50">
-                        <td class="p-4">
-                            Anahi Bashirian (You) 
-                        </td>
-                        <td class="p-4">
-                            admin@example.com  
-                        </td>
-                        <td class="p-4">
-                            Super Administrator 
-                        </td>
-                    </tr>
                     </tbody>
                 </table>
             </div>        
             
-            <div class="container flex">
-                <button @click="previousPage">Previous</button> <button @click="nextPage">Next</button>
+            <div class="container flex justify-center p-1">
+                <button @click="previousPage">Previous</button> <button @click="{{ i+1 }}">Next</button>
             </div>
-
-            
+            {% endset %}
+            {{ i | log }}            
         </div>
 
         <div class="col-lg-4">

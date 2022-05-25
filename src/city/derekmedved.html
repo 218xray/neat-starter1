@@ -58,18 +58,31 @@ path: city
 
                     {% for item in citycouncil.items %}
                     <tbody>
-                    <tr>
+                    <tr class="border-b hover:bg-gray-50">
                         <td class="p-4"> {{ item.name }} </td>   
                         <td> {{ item.position }} </td>   
                         <td> {{ item.url }} </td>   
                         <td> {{ item.raw }} </td>   
                     </tr>
                     {% endfor %}
-                    </template>
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-4">
+                            Anahi Bashirian (You) 
+                        </td>
+                        <td class="p-4">
+                            admin@example.com  
+                        </td>
+                        <td class="p-4">
+                            Super Administrator 
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
-                <button @click="previousPage">Previous</button> <button @click="nextPage">Next</button>
             </div>        
+            
+            <div class="container flex">
+                <button @click="previousPage">Previous</button> <button @click="nextPage">Next</button>
+            </div>
 
             
         </div>

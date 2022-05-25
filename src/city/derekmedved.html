@@ -27,7 +27,6 @@ path: city
             </div>
 
             <div class="container flex" x-data="catData">
-                {% set i = 0 %}
                 <table class="table-auto w-full">
                     <thead class="border-b">
                         <tr class="bg-gray-100 table-header">
@@ -44,6 +43,8 @@ path: city
                     </thead>
     
                     <!--thead>
+                                        {% set i = 0 %}
+
                     <tr>
                         <th @click="sort('name')">Name</th>
                         <th @click="sort('age')">Age</th>
@@ -54,6 +55,9 @@ path: city
                     <tbody>
                     <template x-if="!cats">
                         <tr><td colspan="4"><i>Loading...</i></td></tr>
+
+                                    {% endset %}
+
                     </template-->
             
 
@@ -73,7 +77,6 @@ path: city
             <div class="container flex justify-center p-1">
                 <button @click="previousPage">Previous</button> <button @click="{{ i+1 }}">Next</button>
             </div>
-            {% endset %}
         </div>
 
         <div class="col-lg-4">

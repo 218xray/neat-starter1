@@ -31,18 +31,33 @@ path: city
                 <table class="table-auto w-full">
                     <thead class="border-b">
                     <tr class="bg-gray-100 table-header">
+                        {% for item in garyanderson.items %}
                         <th class="p-4 font-medium text-left">
-                            Date
+                            {{ item.file }}
                         </th>
                         <th class="p-4 font-medium text-left">
-                            File #
+                            {{ item.date }}
                         </th>
                         <th class="p-4 font-medium text-left">
-                            Title
+                            {{ item.title }}
                         </th>
+                        {% endfor %}
                     </tr>
                     </thead>
                     <tbody>
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-4">
+                            12/6/2021 
+                        </td>
+                        <td class="p-4">
+                            21-0942R
+                        </td>
+                        <td class="p-4">
+                            RESOLUTION AUTHORIZING CITY OFFICIALS TO NEGOTIATE A CONTRACT WITH HUMAN DEVELOPMENT CENTER 
+                            FOR INVESTMENT IN THE DULUTH COMMUNITY CRISIS RESPONSE PROGRAM
+                        </td>
+                    </tr>
+    
                     <tr class="border-b hover:bg-gray-50">
                         <td class="p-4">
                             12/6/2021 

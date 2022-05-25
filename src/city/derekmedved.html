@@ -28,7 +28,7 @@ path: city
 
             <div class="container flex" x-data="catData">
                 {{ i }}
-                <!--table class="table-auto w-full">
+                <table class="table-auto w-full">
                     {% set i = 0 %}
                     <thead class="border-b">
                         <tr class="bg-gray-100 table-header">
@@ -50,11 +50,10 @@ path: city
                             <td> {{ item.name }} </td>   
                             <td> {{ item.position }} </td>   
                             <td> {{ item.url }} </td>   
-                            <td> {{ item.raw }} </td>   
                         </tr>
                         {% endfor %}
                     </tbody>
-                </table-->
+                </table>
 
                 <table class="text-left w-full">
                     <thead class="bg-black flex text-white w-full">

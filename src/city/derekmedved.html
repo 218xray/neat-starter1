@@ -222,7 +222,7 @@ document.addEventListener('alpine:init', () => {
       return this.filteredRecords.slice(this.currentPage * this.itemsPerPage, (this.currentPage + 1) * this.itemsPerPage)
     },
     async getRecords() {
-      this.records = await (await fetch('https://assets.codepen.io/144736/all_records.json')).json();
+      this.records = await (await fetch('all_records.json')).json();
 			this.artists = [...new Set(this.records.map(record => record.artist))].sort();
 		  this.decades = [...new Set(this.records.map(record => record.year.toString().slice(0, -1)))].sort();
       document.documentElement.classList.add('alpine');

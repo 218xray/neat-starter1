@@ -57,6 +57,7 @@ path: city
                         <tr><td colspan="4"><i>Loading...</i></td></tr>
 
                                     {% endset %}
+                                    {{ i+1 }}
 
                     </template-->
             
@@ -75,7 +76,7 @@ path: city
             </div>        
             
             <div class="container flex justify-center p-1">
-                <button @click="previousPage">Previous</button> <button @click="{{ i+1 }}">Next</button>
+                <button @click="previousPage">Previous</button> <button @click="">Next</button>
             </div>
         </div>
 

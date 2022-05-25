@@ -72,7 +72,7 @@ path: city
             </div>        
             
             <div class="container flex justify-center p-1">
-                <button @click="previousPage">Previous</button> <button @click="{{ i+1 }}">Next</button>
+                <button @click="previousPage">Previous</button> <button @click="nextPage">Next</button>
             </div>
 
             <div class="collection" x-data="collection">
@@ -149,6 +149,35 @@ path: city
                   </ol>
                 </nav>
               </div>
+
+              <div class="container flex">
+                <div x-data="catData">
+                    <table id="catTable">
+                      <thead>
+                        <tr>
+                          <th @click="sort('name')">Name</th>
+                          <th @click="sort('age')">Age</th>
+                          <th @click="sort('breed')">Breed</th>
+                          <th @click="sort('gender')">Gender</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <template x-if="!cats">
+                          <tr><td colspan="4"><i>Loading...</i></td></tr>
+                        </template>
+                        <template x-for="cat in pagedCats" :key="cat.id">
+                          <tr>
+                            <td x-text="cat.name"></td>   
+                            <td x-text="cat.age"></td>   
+                            <td x-text="cat.breed"></td>   
+                            <td x-text="cat.gender"></td>   
+                          </tr>
+                        </template>
+                      </tbody>
+                    </table>
+                    <button @click="previousPage">Previous</button> <button @click="nextPage">Next</button>
+                  </div>
+              </div>
               
 
         </div>
@@ -204,60 +233,46 @@ path: city
     
 </div>
 <script>
-fetch('all_records.json')
-  .then(response => response.json())
-  .then(jsonResponse => console.log(jsonResponse))     
-</script>
 
-<script>
 document.addEventListener('alpine:init', () => {
-	Alpine.data('collection', () => ({
-    artists: [],
-		decades: [],
-    filters: {
-      year: '',
-      artist: '',
+  Alpine.data('catData', () => ({
+    cats:null,
+    sortCol:null,
+    sortAsc:false,
+    pageSize:4,
+    curPage:1,
+    async init() {
+      let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
+      // Add an ID value
+      let data = await resp.json();
+      data.forEach((d,i) => d.id = i);
+      this.cats = data;
     },
-    records: [],
-		itemsPerPage: 5,
-		currentPage: 0,
-    numOfPages() {
-      return Math.ceil(this.filteredRecords.length / this.itemsPerPage)
+    nextPage() {
+      if((this.curPage * this.pageSize) < this.cats.length) this.curPage++;
     },
-    page() {
-      return this.filteredRecords.slice(this.currentPage * this.itemsPerPage, (this.currentPage + 1) * this.itemsPerPage)
+    previousPage() {
+      if(this.curPage > 1) this.curPage--;
     },
-    async getRecords() {
-      this.records = await fetch('all_records.json');
-			this.artists = [...new Set(this.records.map(record => record.artist))].sort();
-		  this.decades = [...new Set(this.records.map(record => record.year.toString().slice(0, -1)))].sort();
-      document.documentElement.classList.add('alpine');
-    },
-    get filteredRecords() {
-      const filtered = this.records.filter((item) => {
-        for (var key in this.filters) {
-          if (this.filters[key] === '') {
-            continue
-          }
-
-          if(!String(item[key]).includes(this.filters[key])) {
-            return false
-          }
-        }
-
-        return true
+    sort(col) {
+      if(this.sortCol === col) this.sortAsc = !this.sortAsc;
+      this.sortCol = col;
+      this.cats.sort((a, b) => {
+        if(a[this.sortCol] < b[this.sortCol]) return this.sortAsc?1:-1;
+        if(a[this.sortCol] > b[this.sortCol]) return this.sortAsc?-1:1;
+        return 0;
       });
-
-      return filtered
     },
-    message() {
-		  return `${this.filteredRecords.length} records`;
-	  },
-    init() {
-      this.getRecords();
-      this.$watch('filters', filter => this.currentPage = 0);
-	   }
-	}))
-})
+    get pagedCats() {
+      if(this.cats) {
+        return this.cats.filter((row, index) => {
+          let start = (this.curPage-1)*this.pageSize;
+          let end = this.curPage*this.pageSize;
+          if(index >= start && index < end) return true;
+        })
+      } else return [];
+    }
+  }))
+});
 </script></section
 

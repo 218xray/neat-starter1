@@ -58,12 +58,16 @@ path: city
 
                 <table class="text-left w-full">
                     <thead class="bg-black flex text-white w-full">
-                        <tr class="flex w-full mb-4">
-                            <th class="p-4 w-1/4">One</th>
-                            <th class="p-4 w-1/4">Two</th>
-                            <th class="p-4 w-1/4">Three</th>
-                            <th class="p-4 w-1/4">Four</th>
-                        </tr>
+                        <tr class="flex w-full mb-4 bg-gray-100 table-header">
+                            <th class="p-4 font-medium text-left">
+                                Name
+                            </th>
+                            <th class="p-4 font-medium text-left">
+                                Email
+                            </th>
+                            <th class="p-4 font-medium text-left">
+                                Role
+                            </th>                        </tr>
                     </thead>
                 <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
                     <tbody class="bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full" style="height: 50vh;">
@@ -73,6 +77,16 @@ path: city
                             <td class="p-4 w-1/4">Birds</td>
                             <td class="p-4 w-1/4">Fish</td>
                         </tr>
+
+                        {% for item in city_council.items %}
+                        <tr class="border-b flex w-full mb-4 hover:bg-gray-50">
+                            <td class="p-4"> {{ item.name }} </td>   
+                            <td class="p-4"> {{ item.position }} </td>   
+                            <td class="p-4"> {{ item.url }} </td>   
+                            <td class="p-4"> {{ item.raw }} </td>   
+                        </tr>
+                        {% endfor %}
+
                         <tr class="flex w-full mb-4">
                             <td class="p-4 w-1/4">Dogs</td>
                             <td class="p-4 w-1/4">Cats</td>

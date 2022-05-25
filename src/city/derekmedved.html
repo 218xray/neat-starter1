@@ -232,6 +232,18 @@ path: city
 </div>
 
 <script>
+    document.addEventListener('alpine:init', () => {
+  Alpine.data('catData', () => ({
+    cats:null,
+    async init() {
+      let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
+      this.cats = await resp.json();
+    },
+  }))
+});
+</script>
+
+<script>
   function alpineInit() {
     return {
       posts: [],

@@ -27,7 +27,21 @@ path: city
             </div>
 
             <div class="container flex" x-data="catData">
-                <table id="catTable">
+                <table class="table-auto w-full">
+                    <thead class="border-b">
+                        <tr class="bg-gray-100 table-header">
+                            <th class="p-4 font-medium text-left">
+                                Name
+                            </th>
+                            <th class="p-4 font-medium text-left">
+                                Email
+                            </th>
+                            <th class="p-4 font-medium text-left">
+                                Role
+                            </th>
+                        </tr>
+                    </thead>
+    
                     <!--thead>
                     <tr>
                         <th @click="sort('name')">Name</th>
@@ -35,13 +49,15 @@ path: city
                         <th @click="sort('breed')">Breed</th>
                         <th @click="sort('gender')">Gender</th>
                     </tr>
-                    </thead-->
+                    </thead>
                     <tbody>
                     <template x-if="!cats">
                         <tr><td colspan="4"><i>Loading...</i></td></tr>
-                    </template>
+                    </template-->
             
+
                     {% for item in citycouncil.items %}
+                    <tbody>
                     <tr>
                         <td class="p-4"> {{ item.name }} </td>   
                         <td> {{ item.position }} </td>   

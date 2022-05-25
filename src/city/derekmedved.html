@@ -43,8 +43,6 @@ path: city
                     </thead>
     
                     <!--thead>
-                                        {% set i = 0 %}
-
                     <tr>
                         <th @click="sort('name')">Name</th>
                         <th @click="sort('age')">Age</th>
@@ -55,10 +53,6 @@ path: city
                     <tbody>
                     <template x-if="!cats">
                         <tr><td colspan="4"><i>Loading...</i></td></tr>
-
-                                    {% endset %}
-                                    {{ i+1 }}
-
                     </template-->
             
 
@@ -78,6 +72,8 @@ path: city
             <div class="container flex justify-center p-1">
                 <button @click="previousPage">Previous</button> <button @click="nextPage">Next</button>
             </div>
+
+            
         </div>
 
         <div class="col-lg-4">

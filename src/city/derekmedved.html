@@ -44,15 +44,15 @@ path: city
                         </tr>
                     </thead>
     
-                    {% for item in city_council.items %}
                     <tbody class="h-12">
-                    <tr class="border-b hover:bg-gray-50">
-                        <td> {{ item.name }} </td>   
-                        <td> {{ item.position }} </td>   
-                        <td> {{ item.url }} </td>   
-                        <td> {{ item.raw }} </td>   
-                    </tr>
-                    {% endfor %}
+                        {% for item in city_council.items %}
+                        <tr class="border-b hover:bg-gray-50">
+                            <td> {{ item.name }} </td>   
+                            <td> {{ item.position }} </td>   
+                            <td> {{ item.url }} </td>   
+                            <td> {{ item.raw }} </td>   
+                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>        

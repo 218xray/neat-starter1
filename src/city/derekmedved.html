@@ -242,7 +242,7 @@ document.addEventListener('alpine:init', () => {
     pageSize:4,
     curPage:1,
     async init() {
-      let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
+      let resp = await fetch('all_records.json');
       // Add an ID value
       let data = await resp.json();
       data.forEach((d,i) => d.id = i);

@@ -204,6 +204,12 @@ path: city
     
 </div>
 <script>
+fetch('all_records.json')
+  .then(response => response.json())
+  .then(jsonResponse => console.log(jsonResponse))     
+</script>
+
+<script>
 document.addEventListener('alpine:init', () => {
 	Alpine.data('collection', () => ({
     artists: [],

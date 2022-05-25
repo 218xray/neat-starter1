@@ -31,20 +31,32 @@ path: city
                 <table class="table-auto w-full">
                     <thead class="border-b">
                     <tr class="bg-gray-100 table-header">
-                        {% for item in garyanderson.items %}
                         <th class="p-4 font-medium text-left">
-                            {{ item.file }}
+                            Date
                         </th>
                         <th class="p-4 font-medium text-left">
-                            {{ item.date }}
+                            File #
                         </th>
                         <th class="p-4 font-medium text-left">
-                            {{ item.title }}
+                            Title
                         </th>
-                        {% endfor %}
                     </tr>
                     </thead>
                     <tbody>
+                        {% for item in garyanderson.items %}
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4">
+                                {{ items.file }}
+                            </td>
+                            <td class="p-4">
+                                {{ items.date }}
+                            </td>
+                            <td class="p-4">
+                                {{ items.title }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+    
                     <tr class="border-b hover:bg-gray-50">
                         <td class="p-4">
                             12/6/2021 

@@ -73,75 +73,86 @@ path: city
             
             <div class="container flex justify-center p-1">
                 <button @click="previousPage">Previous</button> <button @click="{{ i+1 }}">Next</button>
-            </div>            
-
-            <div x-data="getData()" data-reflect-root="">
-                <form class="form-fields">
-                    <div class="field search">
-                        <label class="label">Search</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Event" x-model="searchValue">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Threshold</label>
-                        <div class="control">
-                            <div class="select">
-                                <select x-model="selectedOption">
-                                    <option>Default</option>
-                                    <template x-for="option in options" :key="option.value">
-                                        <option :key="option.value" :value="option.value" x-text="option.text"></option>
-                                    </template>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="control">
-                        <Search class="button is-link" @click="fetchData()"
-                            :class="[ isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700' ]" :disabled="isLoading"
-                            disabled="disabled">
-                            Search
-                            </button>
-                    </div>
-                </form>
-                <template x-if="events">
-                    <table class="result-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Location</th>
-                                <th>Attendes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <template x-for="event in events" :key="event.id">
-                                <tr>
-                                    <th x-text="event.id"></th>
-                                    <th x-text="event.title"></th>
-                                    <th x-text="event.description">Holanda</th>
-                                    <th x-text="event.location">Neto</th>
-                                    <th x-text="event.attendes">1</th>
-                                </tr>
-                            </template>
-                        </tbody>
-                    </table>
-                    <br />
-                    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                        <a class="pagination-previous" x-model="previousPage" @click="fetchData(previousPage)">Previous</a>
-                        <a class="pagination-next" x-model="nextPage" @click="fetchData(nextPage)">Next page</a>
-                        <ul class="pagination-list">
-                            <li><a class="pagination-link" x-model="1" x-text="1" @click="fetchData(1)"></a></li>
-                            <li><span class="pagination-ellipsis">&hellip;</span></li>
-                            <li><a class="pagination-link is-current" x-text="page">46</a></li>
-                            <li><span class="pagination-ellipsis">&hellip;</span></li>
-                            <li><a class="pagination-link" x-model="lastPage" x-text="lastPage"
-                                    @click="fetchData(lastPage)"></a></li>
-                        </ul>
-                    </nav>
-                </template>
             </div>
+
+            <div class="collection" x-data="collection">
+                <fieldset class="filters" hidden>
+                  <legend>Filter by</legend>
+              
+                  <label for="artist">Artist</label>
+                  <select id="artist" x-model="filters.artist">
+                    <option value="">All</option>
+                    <template x-for="artist in artists">
+                      <option x-text="artist"></option>
+                    </template>
+                  </select>
+              
+                  <label for="decade">Decade</label>
+                  <select id="decade" x-model="filters.year">
+                    <option value="">All</option>
+                    <template x-for="year in decades">
+                      <option :value="year" x-text="`${year}0`"></option>
+                    </template>
+                  </select>
+                </fieldset>
+                
+                <p id="message">Showing <output x-text="message">40 records</output></p>
+                  
+                  <div aria-labelledby="message" role="region" tabindex="-1" x-ref="region">
+                    <ol class="records">	
+                          <template x-for="record in page">
+                              <li>
+                                <strong x-text="record.title"></strong><br>
+                                Released in <time :datetime="record.year" x-text="record.year"></time> by <span x-text="record.artist"></span>.
+                              </li>
+                          </template>
+                    <li x-ignore>
+                      <strong>Die große Palmöllüge</strong><br>
+                      Released in <time datetime="2020">2020</time> by Akne Kid Joe.
+                    </li>
+                    <li x-ignore>
+                      <strong>Post Human: Survial Horror</strong><br>
+                      Released in <time datetime="2020">2020</time> by Bring me the Horizon.
+                    </li>
+                    <li x-ignore>
+                      <strong>Joy as an Act of Resistance</strong><br>
+                      Released in <time datetime="2018">2018</time> by Idles.
+                    </li>
+                    <li x-ignore>
+                      <strong>Licensed to Ill</strong><br>
+                      Released in <time datetime="1986">1986</time> by Beastie Boys.
+                    </li>
+                    <li x-ignore>
+                      <strong>Paul&#39;s Boutique</strong><br>
+                      Released in <time datetime="1989">1989</time> by Beastie Boys.
+                    </li>
+                  </ol>
+                </div>
+              
+                <nav aria-label="Select a page">
+                  <ol class="pages">
+                    <template x-for="idx in numOfPages">
+                      <li>
+                        <a @click.prevent="currentPage = idx - 1; $nextTick(() => { $refs.region.focus(); $refs.region.scrollIntoView() });" :href="`/${idx}`" x-text="`Page ${idx}`" :aria-current="idx === currentPage + 1 ? 'page' : false"></a>
+                      </li>
+                    </template>
+                    <li x-ignore>
+                      <a href="/index_js/" aria-current="page">
+                        Page 1
+                      </a>
+                    </li>
+                    <li x-ignore>
+                      <a href="/index_js/1/">
+                        Page 2
+                      </a>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+              
+
+        </div>
+
         <div class="col-lg-4">
             <div class="sidebar">
             <!-- CONTACT -->
@@ -192,43 +203,55 @@ path: city
     </div>
     
 </div>
-<script type="text/javascript">
+<script>
+document.addEventListener('alpine:init', () => {
+	Alpine.data('collection', () => ({
+    artists: [],
+		decades: [],
+    filters: {
+      year: '',
+      artist: '',
+    },
+    records: [],
+		itemsPerPage: 5,
+		currentPage: 0,
+    numOfPages() {
+      return Math.ceil(this.filteredRecords.length / this.itemsPerPage)
+    },
+    page() {
+      return this.filteredRecords.slice(this.currentPage * this.itemsPerPage, (this.currentPage + 1) * this.itemsPerPage)
+    },
+    async getRecords() {
+      this.records = await (await fetch('https://assets.codepen.io/144736/all_records.json')).json();
+			this.artists = [...new Set(this.records.map(record => record.artist))].sort();
+		  this.decades = [...new Set(this.records.map(record => record.year.toString().slice(0, -1)))].sort();
+      document.documentElement.classList.add('alpine');
+    },
+    get filteredRecords() {
+      const filtered = this.records.filter((item) => {
+        for (var key in this.filters) {
+          if (this.filters[key] === '') {
+            continue
+          }
 
-    function getData() {
-        return {
-            selectedOption: "",
-            options: [
-                { value: "0.95", text: "0.95" },
-                { value: "0.9", text: "0.9" },
-                { value: "0.8", text: "0.8" },
-                { value: "0.7", text: "0.7" },
-            ],
-            searchValue: '',
-            page: 1,
-            limit: 10,
-            total: 50,
-            events: null,
-            isLoading: false,
-            previousPage: 1,
-            nextPage: null,
-            lastPage: 0,
-            fetchData(page = this.page) {
-                this.page = page
-                this.isLoading = true;
-                fetch(`https://5d6516c05b26ae001489eb85.mockapi.io/api/v1/events?search=${this.searchValue}&page=${this.page}&limit=${this.limit}`)
-                    .then((res) => res.json())
-                    .then((data) => {
-                        this.isLoading = false;
-                        this.events = data;
+          if(!String(item[key]).includes(this.filters[key])) {
+            return false
+          }
+        }
 
-                        this.previousPage = this.page == 1 ? this.previousPage : this.page - 1
-                        this.nextPage = this.page + 1
+        return true
+      });
 
-                        this.lastPage = Math.floor(this.total / this.limit)
-                    });
-            },
-        };
-    }
-    </script>
-</section
+      return filtered
+    },
+    message() {
+		  return `${this.filteredRecords.length} records`;
+	  },
+    init() {
+      this.getRecords();
+      this.$watch('filters', filter => this.currentPage = 0);
+	   }
+	}))
+})
+</script></section
 

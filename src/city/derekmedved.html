@@ -62,13 +62,6 @@ path: city
                     </thead>
                 <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
                     <tbody class="bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full" style="height: 50vh;">
-                        <tr class="flex w-full mb-4">
-                            <td class="p-4 w-1/4">Dogs</td>
-                            <td class="p-4 w-1/4">Cats</td>
-                            <td class="p-4 w-1/4">Birds</td>
-                            <td class="p-4 w-1/4">Fish</td>
-                        </tr>
-
                         {% for item in city_council.items %}
                         <tr class="border-b flex w-full mb-4 hover:bg-gray-50">
                             <td class="p-4"> {{ item.name }} </td>   
@@ -76,25 +69,6 @@ path: city
                             <td class="p-4"> {{ item.url }} </td>   
                         </tr>
                         {% endfor %}
-
-                        <tr class="flex w-full mb-4">
-                            <td class="p-4 w-1/4">Dogs</td>
-                            <td class="p-4 w-1/4">Cats</td>
-                            <td class="p-4 w-1/4">Birds</td>
-                            <td class="p-4 w-1/4">Fish</td>
-                        </tr>
-                        <tr class="flex w-full mb-4">
-                            <td class="p-4 w-1/4">Dogs</td>
-                            <td class="p-4 w-1/4">Cats</td>
-                            <td class="p-4 w-1/4">Birds</td>
-                            <td class="p-4 w-1/4">Fish</td>
-                        </tr>
-                        <tr class="flex w-full mb-4">
-                            <td class="p-4 w-1/4">Dogs</td>
-                            <td class="p-4 w-1/4">Cats</td>
-                            <td class="p-4 w-1/4">Birds</td>
-                            <td class="p-4 w-1/4">Fish</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>        

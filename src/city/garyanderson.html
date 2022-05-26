@@ -28,9 +28,9 @@ path: city
             </div>
 
             <div class="activity">
-                <table class="table-auto w-full">
-                    <thead class="border-b w-full">
-                        <tr class="bg-gray-100 table-header">
+                <table class="text-left w-full">
+                    <thead class="bg-black flex text-white w-full">
+                        <tr class="flex w-full mb-4">
                             <th class="p-4 font-medium text-left">Date</th>
                             <th class="p-4 font-medium text-left">File #</th>
                             <th class="p-4 font-medium text-left">Title</th>
@@ -38,7 +38,7 @@ path: city
                     </thead>
                     <tbody class="bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full" style="height: 50vh;">
                         {% for item in garyanderson.items %}
-                        <tr class="border-b hover:bg-gray-50">
+                        <tr class="flex w-full mb-4">
                             <td class="p-4">{{ item.date }}</td>
                             <td class="p-4">{{ item.file }}</td>
                             <td class="p-4">{{ item.title }}</td>

@@ -8,7 +8,7 @@ path: city
     <div class="container">
         <div class="grid auto-rows-max">
           <div class="md:col-start-9 md:col-end-12 lg:col-start-1 lg:col-end-8 entries">
-            <article class="entry">
+            <article class="entry row-span-1">
                 <h1 class="section-title">ABOUT</h1>
                 <div class="entry-content flex flex-col ">
                     <p>Duluth! I can't thank you enough for your support. Running for office is not easy. I have learned so much from all of my constituents over the last year. 
@@ -35,7 +35,7 @@ path: city
             <div class="md:col-start-1 md:col-end-8 lg:col-start-9 lg:col-end-12">
                 <div class="sidebar">
                     <!-- CONTACT -->
-                    <div class="flex flex-col items-center contact">
+                    <div class="flex flex-col items-center row-span-1 contact">
                         <h3 class="sidebar-title">Contact</h3>
                         <picture>
                             <img src="\static\img\officials\garyanderson.webp" alt="Terese Tomanek" class="p-1 bg-white border img-thumbnail max-h-64">
@@ -74,6 +74,7 @@ path: city
                         </a>
                     </div> <!-- END SOCIALS -->
 
+                    <!-- ACCORDIAN -->
                     <div class="max-w-xl mx-auto bg-white border border-gray-200 rounded-md">
                         <ul class="shadow-box">
                             <li class="relative border-b border-gray-200" x-data="{selected:null}">
@@ -95,9 +96,11 @@ path: city
                             </li>                                
                         </ul>
                     </div>
+                    <!-- END ACCORDIAN-->
                 </div>
             </div>
 
+            <!-- TABLE -->
             <div class="md:col-start-9 md:col-end-12 lg:col-start-9 lg:col-end-12">
                 <div class="activity rounded-md shadow pt-2">
                     <table class="text-left w-full">
@@ -122,7 +125,7 @@ path: city
                     <p>* xx-xxxxR = Resolution</p>
                     <p>* xx-xxxxO = Ordinance</p>
                 </div>
-            </div> <!-- INTRO -->
+            </div> <!-- END TABLE -->
         </div><!-- End sidebar -->
     </div> <!-- TOP SECTION -->
 </section>

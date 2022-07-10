@@ -17,7 +17,7 @@ path: 2022
             </h2>
         </div>
 
-        <div class="container flex flex-row items-center mx-auto lg:h-auto">
+        <div class="container flex flex-row items-center mx-auto mb-2 lg:h-auto">
             {% if 2022_federal.items %}
                 {% for item in 2022_federal.items %}
                     <div class="m-auto col-lg-2 col-md-5">
@@ -37,7 +37,7 @@ path: 2022
         </div>
 
         <div class="flex flex-col items-center mx-auto containor">
-            <h2 class="position">
+            <h2 class="mt-2ome position">
                 State Offices
             </h2>
         </div>
@@ -67,9 +67,9 @@ path: 2022
                     <div class="m-auto col-lg-2 col-md-5">
                         <div class="text-center box">
                             <a href="/2022/primary-election{{ item.url }}">
-                                <h3>{{ item.govenor }}</h3>
-                                <h3>and</h3>
-                                <h3>{{ item.lieutenant }}</h3>
+                                <h3 class="name">{{ item.govenor }}</h3>
+                                <h3 class="name">and</h3>
+                                <h3 class="name">{{ item.lieutenant }}</h3>
                                 <h5>{{ item.position }}</h5>
                                 <h5>{{ item.party }}</h5>
                                 <picture class="photo_id">
@@ -90,7 +90,7 @@ path: 2022
                             <a href="/2022/primary-election{{ item.url }}">
                                 <h3>{{ item.govenor }}</h3>
                                 <h3>and</h3>
-                                <h3>{{ item.lieutenant }}</h3>
+                                <h3 >{{ item.lieutenant }}</h3>
                                 <h5>{{ item.position }}</h5>
                                 <h5>{{ item.party }}</h5>
                                 <picture class="photo_id">

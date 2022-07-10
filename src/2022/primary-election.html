@@ -13,13 +13,38 @@ path: 2022
 
         <div class="flex flex-col items-center mx-auto containor">
             <h2 class="position">
-                Federal Office
+                Federal OfficeS
             </h2>
         </div>
 
         <div class="container flex flex-row items-center mx-auto lg:h-auto">
             {% if 2022_federal.items %}
                 {% for item in 2022_federal.items %}
+                    <div class="m-auto col-lg-2 col-md-5">
+                        <div class="text-center box">
+                            <a href="/2022/primary-election{{ item.url }}">
+                                <h3>{{ item.name }}</h3>
+                                <h5>{{ item.position }}</h5>
+                                <h5>{{ item.party }}</h5>
+                                <picture class="photo_id">
+                                    <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border photo_id" >
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="flex flex-col items-center mx-auto containor">
+            <h2 class="position">
+                State OfficeS
+            </h2>
+        </div>
+
+        <div class="container flex flex-row items-center mx-auto lg:h-auto">
+            {% if 2022_state_rep.items %}
+                {% for item in 2022_state_rep.items %}
                     <div class="m-auto col-lg-2 col-md-5">
                         <div class="text-center box">
                             <a href="/2022/primary-election{{ item.url }}">

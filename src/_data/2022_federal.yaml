@@ -1,0 +1,22 @@
+---
+items:
+  - name: John Munter
+    position: U.S. Representative District 8
+    party: Republic
+    url: "/JohnMunter"
+    raw: JohnMunter
+  - name: Jen Schultz
+    position: U.S. Representative District 8
+    party: Republic
+    url: "/JenSchultz"
+    raw: JenSchultz
+  - name: Pete Stauber
+    position: U.S. Representative District 8
+    party: Republic
+    url: "/PeteStauber"
+    raw: PeteStauber
+  - name: Harry Robb Welty
+    position: U.S. Representative District 8
+    party: Republic
+    url: "/HarryRobbWelty"
+    raw: HarryRobbWelty

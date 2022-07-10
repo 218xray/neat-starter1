@@ -11,14 +11,15 @@ path: 2022
             2022 Primary Election
         </h1>
     
-        {% if city_mayor.items %}
-            {% for item in city_mayor.items %}
+        {% if 2022_federal.items %}
+            {% for item in 2022_federal.items %}
             <div class="text-center box">
                 <a href="/city{{ item.url }}">
                     <h3>{{ item.name }}</h3>
                     <h5>{{ item.position }}</h5>
+                    <h5>{{ item.party }}</h5>
                     <picture>
-                        <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border">
+                        <!--img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border"-->
                     </picture>
                 </a>
             {% endfor %}

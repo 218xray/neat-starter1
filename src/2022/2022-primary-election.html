@@ -1,16 +1,16 @@
 ---
 layout: default
-title: City
-path: city
+title: primary
+path: 2022
 ---
 
 <section>
     <div class="container">
         <div class="grid auto-rows-max">
           <div class="md:col-start-9 md:col-end-12 lg:col-start-1 lg:col-end-8 entries">
-            <article class="entry row-span-1">
+            <article class="row-span-1 entry">
                 <h1 class="section-title">ABOUT</h1>
-                <div class="entry-content flex flex-col ">
+                <div class="flex flex-col entry-content ">
                     <p>Duluth! I can't thank you enough for your support. Running for office is not easy. I have learned so much from all of my constituents over the last year. 
                         I have listened eagerly to the feedback that I have received on the phone and at the doors, on Council meetings, through emails, and Facebook messages. 
                         I want to thank you for trusting me, and thank you for supporting me during this campaign. I can't thank my family, and my friends who act like family 
@@ -30,16 +30,16 @@ path: city
 
                 <!-- TABLE -->
                 <div class="md:col-start-9 md:col-end-12 lg:col-start-9 lg:col-end-12">
-                    <div class="activity rounded-md shadow pt-2">
-                        <table class="text-left w-full">
-                            <thead class="bg-black flex text-white w-full ">
+                    <div class="pt-2 rounded-md shadow activity">
+                        <table class="w-full text-left">
+                            <thead class="flex w-full text-white bg-black ">
                                 <tr class="flex w-full mb-4">
-                                    <th class="p-4 pr-14 w-1/4">Date</th>
-                                    <th class="p-4 w-1/3">File #</th>
-                                    <th class="p-4 w-1/3">Title</th>
+                                    <th class="w-1/4 p-4 pr-14">Date</th>
+                                    <th class="w-1/3 p-4">File #</th>
+                                    <th class="w-1/3 p-4">Title</th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full" style="height: 50vh;">
+                            <tbody class="flex flex-col items-center justify-between w-full overflow-y-scroll bg-grey-light" style="height: 50vh;">
                                 {% for item in garyanderson.items %}
                                 <tr class="flex w-full mb-4">
                                     <td class="p-4">{{ item.date }}</td>

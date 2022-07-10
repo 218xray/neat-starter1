@@ -78,6 +78,22 @@ path: 2022
                             </a>
                         </div>
                     </div>
+                    {% if items > 5 %}
+                    <div class="m-auto col-lg-2 col-md-5">
+                        <div class="text-center box">
+                            <a href="/2022/primary-election{{ item.url }}">
+                                <h3>{{ item.govenor }}</h3>
+                                <h3>and</h3>
+                                <h3>{{ item.lieutenant }}</h3>
+                                <h5>{{ item.position }}</h5>
+                                <h5>{{ item.party }}</h5>
+                                <picture class="photo_id">
+                                    <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border photo_id" >
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
                 {% endfor %}
             {% endif %}
         </div>

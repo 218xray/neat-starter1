@@ -63,7 +63,7 @@ path: 2022
 
         <div class="container flex flex-row items-center mx-auto lg:h-auto">
             {% if 2022_state_gov_and_lt.items %}
-                {% for item in 5 %}
+                {% for item in 2022_state_gov_and_lt.items %}
                     <div class="m-auto col-lg-2 col-md-5">
                         <div class="text-center box">
                             <a href="/2022/primary-election{{ item.url }}">
@@ -78,27 +78,32 @@ path: 2022
                             </a>
                         </div>
                     </div>
-                    {% if items.length > 5 %}
-                    <div class="container flex flex-row items-center mx-auto lg:h-auto">
-                        <div class="m-auto row">
-                            <div class="m-auto col-lg-2 col-md-5">
-                                <div class="text-center box">
-                                    <a href="/2022/primary-election{{ item.url }}">
-                                        <h3>{{ item.govenor }}</h3>
-                                        <h3>and</h3>
-                                        <h3>{{ item.lieutenant }}</h3>
-                                        <h5>{{ item.position }}</h5>
-                                        <h5>{{ item.party }}</h5>
-                                        <picture class="photo_id">
-                                            <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border photo_id" >
-                                        </picture>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     {% endif %}
                 {% endfor %}
             {% endif %}
         </div>
+
+        <div class="container flex flex-row items-center mx-auto lg:h-auto">
+            {% if 2022_state_gov_and_lt2.items %}
+                {% for item in 2022_state_gov_and_lt2.items %}
+                    <div class="m-auto col-lg-2 col-md-5">
+                        <div class="text-center box">
+                            <a href="/2022/primary-election{{ item.url }}">
+                                <h3>{{ item.govenor }}</h3>
+                                <h3>and</h3>
+                                <h3>{{ item.lieutenant }}</h3>
+                                <h5>{{ item.position }}</h5>
+                                <h5>{{ item.party }}</h5>
+                                <picture class="photo_id">
+                                    <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border photo_id" >
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+
     </div>
 </section>

@@ -1,0 +1,27 @@
+---
+items:
+  - name: Bill Dahn
+    position: Attorney General
+    party: Democratic-Farmer-Labor
+    url: "/BillDahn"
+    raw: BillDahn
+  - name: Keith Ellison
+    position: Attorney General
+    party: Democratic-Farmer-Labor
+    url: "/KeithEllison"
+    raw: KeithEllison
+  - name: Doug Wardlow
+    position: Attorney General
+    party: Republican
+    url: "/DougWardlow"
+    raw: DougWardlow
+  - name: Jim Schultz
+    position: Attorney General
+    party: Republican
+    url: "/JimSchultz"
+    raw: JimSchultz
+  - name: Sharon Anderson
+    position: Attorney General
+    party: Republican
+    url: "/SharonAnderson"
+    raw: SharonAnderson

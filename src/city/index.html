@@ -14,21 +14,21 @@ path: city
             </strong>
         </h1>
     
-    {% if city_mayor.items %}
-        {% for item in city_mayor.items %}
-        <div class="text-center box">
-            <a href="/city{{ item.url }}">
-                <h3>{{ item.name }}</h3>
-                <h5>{{ item.position }}</h5>
-                <picture>
-                    <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border">
-                </picture>
-            </a>
-        {% endfor %}
-    {% endif %}
+        {% if city_mayor.items %}
+            {% for item in city_mayor.items %}
+            <div class="text-center box">
+                <a href="/city{{ item.url }}">
+                    <h3>{{ item.name }}</h3>
+                    <h5>{{ item.position }}</h5>
+                    <picture>
+                        <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border">
+                    </picture>
+                </a>
+            {% endfor %}
+        {% endif %}
     </div>
 
-    <div class="container flex flex-row items-center mx-auto lg:h-auto">
+    <div class="container flex flex-row flex-wrap items-center mx-auto lg:h-auto">
         {% if city_council.items %}
             {% for item in city_council.items %}
             <div class="m-auto col-lg-2 col-md-5">

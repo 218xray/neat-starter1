@@ -71,3 +71,48 @@ ACCORDIAN
                     </ul>
                 </div>
             </div>
+
+MUNTER
+<p>
+                        “The major issue is not jobs but affordable housing and property valuations,” Munter stated in a news release. “The next Congress Member needs to support
+                         the much-discussed I-35 rebuild in Duluth to reduce its size by half, giving more Lake access and new housing potential with State and Federal funding. 
+                         The Department of Ag&#39;s no-money-down mortgages need to be promoted for small towns, cities, and rural areas. HUD, the State, and non-profits need to be 
+                         worked with for more affordable housing.”
+                    </p>
+                    <p>
+                        Munter is a graduate of Duluth East High School, University of Minnesota-Duluth, and in 1988 from the University of Dubuque Theological Seminary with a master 
+                        of divinity degree. He is a retiree from Delta Airlines in Chisholm with a union pension and lives on a small ancestral hobby farm with his family in Warba near 
+                        Grand Rapids.
+                    </p>
+                    <p>
+                        “I am opposing Jen Schultz because she thinks copper-nickel mining can be ecological. It can&#39;t. Trading 20 years of jobs for more than 500 years of pollution is 
+                        a crazy idea,” Munter stated.
+                    </p>
+                    <p>
+                        Munter described incumbent GOP Rep. Pete Stauber as “a Libertarian who hates all government — even good government like reasonable gun regulation, flying in 
+                        sorely needed baby formula, and prohibitions against oil price gouging.”
+                    </p>
+                    <p>
+                        Munter said Stauber has promoted low-cost drugs, a cap on insulin, broadband, infrastructure and support for veterans and then voted against all of those 
+                        issues continually.
+                    </p>
+                    <p>
+                        “Most egregiously, Stauber voted against the economic interests of the 8th District in the Infrastructure bill and the financing coming in for our 29 airports, 
+                        six mines, Duluth&#39;s &#39;Can-of-Worms&#39; project, clean-up of the St. Louis River, and putting an extra lock at the Soo Locks to prevent an economic 
+                        disaster if it the big lock goes down and backs up our ore and grain,” Munter stated.
+                    </p>
+                    <p>
+                        In addition, Munter characterized the national Republican platform as raising taxes on the bottom 60% of tax filers and sunset Social Security, Medicare, and 
+                        Medicaid in five years.
+
+                        “This is insane. See Rick Scott&#39;s 11 Point Program, the small print of bullet points 5 and 6. Stauber needs to disown this agenda,” according to the release.
+
+                        Munter criticized Stauber for signing the amicus brief in the 2020 Texas v. Pennsylvania lawsuit thrown out by the Supreme Court. The suit sought to withhold 
+                        the certified presidential vote count of four states, alleging those states violated the U.S. Constitution by changing election procedures through 
+                        non-legislative means.
+
+                        The suit “would have deleted the votes of four states allowing Republican state legislatures the ability to over-ride the vote of the people for spurious 
+                        reasons,” Munter stated. “This is an existential threat for 2024 with Republican state legislature&#39;s side-lining the role of governors, secretaries of state, 
+                        and election commissions in swing states in order to appoint their own Presidential Electors. Electing politicians who support this electoral theft cannot be 
+                        tolerated.”
+                    </p>

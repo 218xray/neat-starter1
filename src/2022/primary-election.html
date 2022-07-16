@@ -39,9 +39,12 @@ path: 2022
         </div>
 
         <div class="flex flex-col items-center mx-auto containor">
-            <h2 class="mt-2ome position">
+            <h2 class="mt-2ome government">
                 State Offices
             </h2>
+            <h3 class="position">
+                State Representative District 8A
+            </h3>
         </div>
 
         <div class="container flex flex-row flex-wrap items-center mx-auto lg:h-auto">
@@ -50,8 +53,7 @@ path: 2022
                     <div class="m-auto col-lg-2 col-md-5">
                         <div class="text-center box">
                             <a href="/2022/primary-election{{ item.url }}">
-                                <h3>{{ item.name }}</h3>
-                                <h5>{{ item.position }}</h5>
+                                <h3 class="primary-name">{{ item.name }}</h3>
                                 <h5>{{ item.party }}</h5>
                                 <picture class="photo_id">
                                     <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 mb-2 bg-white border photo_id" >

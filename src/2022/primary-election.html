@@ -65,6 +65,12 @@ path: 2022
             {% endif %}
         </div>
 
+        <div class="flex flex-col items-center mx-auto containor">
+            <h3 class="position">
+                Governor and Lieutenant Governor
+            </h3>
+        </div>
+
         <div class="container flex flex-row flex-wrap items-center mx-auto lg:h-auto">
             {% if 2022_state_gov_and_lt.items %}
                 {% for item in 2022_state_gov_and_lt.items %}
@@ -74,7 +80,6 @@ path: 2022
                                 <h3 class="name">{{ item.govenor }}</h3>
                                 <h3 class="name">&</h3>
                                 <h3 class="name">{{ item.lieutenant }}</h3>
-                                <h5>{{ item.position }}</h5>
                                 <h5>{{ item.party }}</h5>
                                 <picture class="photo_id">
                                     <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border photo_id" >

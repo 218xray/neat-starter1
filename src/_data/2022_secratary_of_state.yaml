@@ -3,20 +3,20 @@ items:
   - name: Steve Carlson
     position: Secretary of State
     party: Democratic-Farmer-Labor
-    url: "/SteveCarlson"
+    url: "/stevecarlson"
     raw: SteveCarlson
   - name: Steve Simon
     position: Secretary of State
     party: Democratic-Farmer-Labor
-    url: "/SteveSimon"
+    url: "/stevesimon"
     raw: SteveSimon
   - name: Erik van Mechelen
     position: Secretary of State
     party: Republican
-    url: "/ErikvanMechelen"
+    url: "/erikvanmechelen"
     raw: ErikvanMechelen
   - name: Kim Crockett
     position: Secretary of State
     party: Republican
-    url: "/KimCrockett"
+    url: "/kimcrockett"
     raw: KimCrockett

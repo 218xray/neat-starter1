@@ -116,3 +116,26 @@ MUNTER
                         and election commissions in swing states in order to appoint their own Presidential Electors. Electing politicians who support this electoral theft cannot be 
                         tolerated.”
                     </p>
+
+                <div class="flex flex-row contact-info justify-evenly">
+                    <h5>Highschool</h5>
+                    <h5>Duluth East</h5>
+                </div>
+                <div class="flex flex-row contact-info justify-evenly">
+                    <h5>Bachelors</h5>
+                    <h5>University of Minnesota Duluth</h5>
+                </div>
+                <div class="flex flex-row contact-info justify-evenly">
+                    <h5>Masters</h5>
+                    <h5>University of Dubuque Theological Seminary</h5>
+                </div>
+
+================ GET SCREEN SIZE ==================
+var win = window,
+    doc = document,
+    docElem = doc.documentElement,
+    body = doc.getElementsByTagName('body')[0],
+    width = win.innerWidth || docElem.clientWidth || body.clientWidth,
+    height = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+alert(height + ' × ' + width);
+console.log(height + ' × ' + width);

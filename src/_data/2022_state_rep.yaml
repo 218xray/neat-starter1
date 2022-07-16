@@ -3,15 +3,15 @@ items:
   - name: Allan Kehr II
     position: State Representative District 8A
     party: Democratic-Farmer-Labor
-    url: "/AllanKehrII"
+    url: "/allankehrii"
     raw: AllanKehrII
   - name: Art Johnston
     position: State Representative District 8A
     party: Democratic-Farmer-Labor
-    url: "/ArtJohnston"
+    url: "/artjohnston"
     raw: ArtJohnston
   - name: Liz Olson
     position: State Representative District 8A
     party: Republican
-    url: "/LizOlson"
+    url: "/lizolson"
     raw: LizOlson

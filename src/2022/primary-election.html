@@ -38,6 +38,7 @@ path: 2022
             {% endif %}
         </div>
 
+        <!-- STATE REPRESENTATIVE DISTRICT 8A -->
         <div class="flex flex-col items-center mx-auto containor">
             <h2 class="mt-2ome government">
                 State Offices
@@ -65,6 +66,7 @@ path: 2022
             {% endif %}
         </div>
 
+        <!-- GOVERNOR AND LIEUTENANT GOVERNOR -->
         <div class="flex flex-col items-center mx-auto containor">
             <h3 class="position">
                 Governor and Lieutenant Governor
@@ -100,7 +102,6 @@ path: 2022
                                 <h3 class="name">{{ item.govenor }}</h3>
                                 <h3 class="name">&</h3>
                                 <h3 class="name">{{ item.lieutenant }}</h3>
-                                <h5>{{ item.position }}</h5>
                                 <h5>{{ item.party }}</h5>
                                 <picture class="photo_id">
                                     <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border photo_id" >
@@ -112,6 +113,13 @@ path: 2022
             {% endif %}
         </div>
 
+        <!-- SECRETARY OF STATE -->
+        <div class="flex flex-col items-center mx-auto containor">
+            <h3 class="position">
+                Secretary of State
+            </h3>
+        </div>
+        
         <div class="container flex flex-row flex-wrap items-center mx-auto lg:h-auto">
             {% if 2022_secratary_of_state.items %}
                 {% for item in 2022_secratary_of_state.items %}
@@ -119,7 +127,6 @@ path: 2022
                         <div class="text-center box">
                             <a href="/2022/primary-election{{ item.url }}">
                                 <h3 class="name">{{ item.name }}</h3>
-                                <h5>{{ item.position }}</h5>
                                 <h5>{{ item.party }}</h5>
                                 <picture class="photo_id">
                                     <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border photo_id" >
@@ -131,6 +138,13 @@ path: 2022
             {% endif %}
         </div>
 
+        <!-- ATTORNEY GENERAL -->
+        <div class="flex flex-col items-center mx-auto containor">
+            <h3 class="position">
+                Attorney General
+            </h3>
+        </div>
+        
         <div class="container flex flex-row flex-wrap items-center mx-auto lg:h-auto">
             {% if 2022_attorney_general.items %}
                 {% for item in 2022_attorney_general.items %}
@@ -138,7 +152,6 @@ path: 2022
                         <div class="text-center box">
                             <a href="/2022/primary-election{{ item.url }}">
                                 <h3 class="name">{{ item.name }}</h3>
-                                <h5>{{ item.position }}</h5>
                                 <h5>{{ item.party }}</h5>
                                 <picture class="photo_id">
                                     <img src="\static\img\officials\{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border photo_id" >

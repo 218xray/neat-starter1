@@ -94,13 +94,21 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 5% 0 0
 }
 
+.government {
+  font-weight: 600;
+}
+
+.primary-name {
+  margin: 0;
+  
+}
+
 /*** Federal ***/
 .photo_id {
   height: 280px;
 }
 
-.position {
-  font-size: 2rem;
+.federal {
   font-weight: 700;
   margin-bottom: .5rem;
 }
@@ -112,6 +120,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: -0.25rem;
 }
 
+.state {
+}
 /*** Dropdown ***/
 .dropdown:hover > .dropdown-content {
 	display: block;

@@ -4,19 +4,19 @@ items:
     position: U.S. Representative District 8
     party: Democratic-Farmer-Labor
     url: "/johnmunter"
-    raw: JohnMunter
+    raw: johnmunter
   - name: Jen Schultz
     position: U.S. Representative District 8
     party: Democratic-Farmer-Labor
     url: "/jenschultz"
-    raw: JenSchultz
+    raw: jenschultz
   - name: Pete Stauber
     position: U.S. Representative District 8
     party: Republican
     url: "/petestauber"
-    raw: PeteStauber
+    raw: petestauber
   - name: Harry Robb Welty
     position: U.S. Representative District 8
     party: Republican
-    url: "/harryrobbWelty"
-    raw: HarryRobbWelty
+    url: "/harryrobbwelty"
+    raw: harryrobbwelty

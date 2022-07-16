@@ -9,9 +9,9 @@ items:
     position: State Representative District 8A
     party: Democratic-Farmer-Labor
     url: "/artjohnston"
-    raw: ArtJohnston
+    raw: artjohnston
   - name: Liz Olson
     position: State Representative District 8A
     party: Republican
     url: "/lizolson"
-    raw: LizOlson
+    raw: lizolson

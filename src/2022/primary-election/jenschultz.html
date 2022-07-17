@@ -37,16 +37,24 @@ path: primary-election
                                 <span class="ico-plus"></span>
                             </div>
                         </button>
-                        <div class="container relative overflow-hidden transition-all duration-700 max-h-0" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
-                            <div class="container p-6">
+                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                            <div class="p-6">
                                 <p>Infrastructure</p>
                                 <p>Economy</p>
-                                <div class="container relative overflow-hidden transition-all duration-700 max-h-0" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
-                                    <div class="container p-6">
-                                        <p>Infrastructure</p>
-                                        <p>Economy</p>
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <span>
+                                    Issues
+                                </span>
+                                <span class="ico-plus"></span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                            <div class="p-6">
+                                <p>Infrastructure</p>
+                                <p>Economy</p>
                             </div>
                         </div>
                     </li>                                

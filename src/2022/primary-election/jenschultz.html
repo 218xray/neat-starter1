@@ -26,7 +26,7 @@ path: primary-election
             </div>
 
             <!-- ACCORDIAN -->
-            <div class="container max-w-xl mx-auto bg-white border border-gray-200 rounded-md">
+            <div class="container max-w-2xl mx-auto bg-white border border-gray-200 rounded-md">
                 <ul class="shadow-box">
                     <li class="relative border-b border-gray-200" x-data="{selected:null}">
                         <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
@@ -52,7 +52,7 @@ path: primary-election
                                 <span class="ico-plus"></span>
                             </div>
                         </button>
-                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                        <div class="relative overflow-hidden transition-all duration-700 max-h-0" x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
                             <div class="p-6">
                                 <p>Infrastructure</p>
                                 <p>Economy</p>

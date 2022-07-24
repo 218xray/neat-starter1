@@ -29,6 +29,49 @@ path: primary-election
                 <h1>Issues</h1>
             </div>
 
+            <div class="w-8/12 mx-auto my-4"
+      x-data="{open: false, hideOverflow: true, selected: null}">
+  <!-- Main toggle -->
+  <div @click="selected = null; hideOverflow = true; open = !open"
+       class="inline-block w-full px-5 py-3 text-center text-white bg-indigo-800 cursor-pointer">
+    Main Accordion (toggle)
+  </div>
+
+  <!-- Accordion -->
+  <div class="relative transition-all duration-700 max-h-0"
+        x-ref="main"
+        :class="hideOverflow && 'overflow-hidden'"
+        x-bind:style="(open || selected) ? 'max-height: ' + $refs.main.scrollHeight + 'px' : ''">
+    <div class="bg-gray-200">
+      <!-- Sub 1 toggle -->
+      <div @click="hideOverflow = false; selected !== 0 ? selected = 0 : selected = null"
+          class="inline-block w-full px-5 py-3 text-center text-white bg-indigo-600 cursor-pointer">
+        Sub Accordion 1 (toggle)
+      </div>
+
+      <!-- Sub 1 accordion -->
+      <div class="relative overflow-hidden transition-all duration-700 max-h-0"
+           x-ref="container0"
+           x-bind:style="selected == 0 ? 'max-height: ' + $refs.container0.scrollHeight + 'px' : ''">
+        Lorem<br> ipsum<br> dolor <br> sit <br> amet.
+      </div>
+
+      <!-- Sub 2 toggle -->
+      <div @click="hideOverflow = false; selected !== 1 ? selected = 1 : selected = null"
+           class="inline-block w-full px-5 py-3 text-center text-white bg-indigo-600 cursor-pointer">
+        Sub Accordion 2 (toggle)
+      </div>
+
+      <!-- Sub 2 accordion -->
+      <div class="relative overflow-hidden transition-all duration-700 max-h-0"
+           x-ref="container1"
+           x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+        Lorem<br> ipsum<br> dolor <br> sit <br> amet.
+      </div>
+    </div>
+  </div>
+</div>
+
             <!-- ACCORDIAN -->
             <div class="container mx-16 bg-white border border-gray-200 rounded-md">
                 <ul class="shadow-box">

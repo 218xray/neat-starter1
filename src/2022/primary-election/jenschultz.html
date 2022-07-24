@@ -34,7 +34,7 @@ path: primary-election
                 <ul class="shadow-box">
                     <li class="relative border-b border-gray-200" x-data="{selected:null}">
                         <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
-                            <div x-id="ac-1" class="flex items-center justify-between">
+                            <div class="flex items-center justify-between">
                                 <span>
                                     Healthcare
                                 </span>
@@ -56,7 +56,7 @@ path: primary-election
                             </div>
 
                             <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
-                                <div x-bind="ac-1-2" class="flex items-center justify-between">
+                                <div class="flex items-center justify-between">
                                     <span>
                                         Economy
                                     </span>
@@ -74,7 +74,8 @@ path: primary-election
                                         I support paid sick and safe time, paid family leave, an increase of the working family tax credit, and extending the child tax credit that Congress recently allowed to expire because when working families do well, our economy and our communities do well.
                                     </p>
                                 </div>
-                            </div>                            
+                            </div>
+    
                         </div>
                     </li>                                
                 </ul>

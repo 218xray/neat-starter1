@@ -32,7 +32,7 @@ path: primary-election
             <!-- ACCORDIAN -->
             <div class="container mx-16 bg-white border border-gray-200 rounded-md">
                 <ul class="shadow-box">
-                    <li class="relative border-b border-gray-200" x-data="{selected:null}">
+                    <li class="relative border-b border-gray-200" x-data="{selected:null}" x-data="{level:null}">
                         <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
                             <div class="flex items-center justify-between">
                                 <span>
@@ -56,7 +56,7 @@ path: primary-election
                             </div>
 
                                                                                             <!-- selected = 3 OR selected = 3 AND 1 -->
-                            <button type="button" class="w-full px-8 py-6 text-left" x-data="{level:null}" @click="level !== 1 ? selected = 1 : level = null">
+                            <button type="button" class="w-full px-8 py-6 text-left" @click="level !== 1 ? selected = 1 : level = null">
                                 <div class="flex items-center justify-between">
                                     <span>
                                         Economy

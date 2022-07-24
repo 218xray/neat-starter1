@@ -139,3 +139,71 @@ var win = window,
     height = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
 alert(height + ' × ' + width);
 console.log(height + ' × ' + width);
+
+            <!-- ACCORDIAN -->
+            <div class="container mx-16 bg-white border border-gray-200 rounded-md">
+                <ul class="shadow-box">
+                    <li class="relative border-b border-gray-200" x-data="{selected:null}">
+                        <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <span>
+                                    Healthcare
+                                </span>
+                                <svg x-show="!selected == 1" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- MINUS -->
+                                    <path class="heroicon-ui" d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm1-9h2a1 1 0 010 2h-2v2a1 1 0 01-2 0v-2H9a1 1 0 010-2h2V9a1 1 0 012 0v2z" />
+                                </svg>
+                                <svg x-show="selected == 1" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- PLUS -->
+                                    <path class="heroicon-ui" d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm4-8a1 1 0 01-1 1H9a1 1 0 010-2h6a1 1 0 011 1z" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 1 && 3 ? 'max-height: ' + 1000 + 'px' : ''">
+                            <div class="p-6">
+                                <p>
+                                    The rising cost of health care is one of the most important and urgent issues facing Minnesotans. Like many in our district, I am in favor of a single-payer system – what some call Medicare for All – that would dramatically cut down on costs associated with health insurance premiums and guarantee coverage for all Americans, regardless of income level.
+                                    We are proud that Minnesota offers the lowest premiums in the country on MNsure, our state health insurance exchange. Another great program is MinnesotaCare, which provides health care coverage for people with low incomes. MinnesotaCare was created with bipartisan support and has been successful for more than 30 years. This is a public option that could be expanded to more Minnesotans and used as a template to move us forward at the federal level so everyone can access affordable, quality healthcare.
+                                    It is easy to get lost in the details and in politics, but I never lose sight of the fact that, in the end, this is about real people facing some of the hardest and most terrifying experiences of their lives. Families should not have to worry that health care costs will ruin their finances in the wealthiest country in the world. Quality health care should be a right for all Americans.
+                                </p>
+                            </div>
+
+                            <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
+                                <div class="flex items-center justify-between">
+                                    <span>
+                                        Economy
+                                    </span>
+                                    <svg x-show="!selected == 1" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- MINUS -->
+                                        <path class="heroicon-ui" d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm1-9h2a1 1 0 010 2h-2v2a1 1 0 01-2 0v-2H9a1 1 0 010-2h2V9a1 1 0 012 0v2z" />
+                                    </svg>
+                                    <svg x-show="selected == 1" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- PLUS -->
+                                        <path class="heroicon-ui" d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm4-8a1 1 0 01-1 1H9a1 1 0 010-2h6a1 1 0 011 1z" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 3 && 1 ? 'max-height: ' + 1000 + 'px' : ''">
+                                <div class="p-6">
+                                    <p>
+                                        I support paid sick and safe time, paid family leave, an increase of the working family tax credit, and extending the child tax credit that Congress recently allowed to expire because when working families do well, our economy and our communities do well.
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+
+                        <button type="button" class="w-full px-8 py-6 text-left border-t border-gray-400" @click="selected !== 2 ? selected = 2 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <span>
+                                    Issues
+                                </span>
+                                <span class="ico-plus"></span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                            <div class="p-6">
+                                <p>Infrastructure</p>
+                                <p>Economy</p>
+                            </div>
+                        </div>
+                    </li>                                
+                </ul>
+            </div>
+            <!-- END ACCORDIAN-->

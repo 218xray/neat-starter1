@@ -33,7 +33,7 @@ path: primary-election
             <div class="container mx-16 bg-white border border-gray-200 rounded-md">
                 <ul class="shadow-box">
                     <li class="relative border-b border-gray-200" x-data="{selected:null}">
-                        <button type="button" class="w-full px-8 py-4 text-left hover:bg-sky-600" @click="selected !== 0 ? selected = 0 : selected = null">
+                        <button type="button" class="w-full px-8 py-4 text-left rounded-md hover:bg-sky-600" @click="selected !== 0 ? selected = 0 : selected = null">
                             <div class="flex items-center justify-between">
                                 <span class="font-bold">
                                     Healthcare
@@ -58,7 +58,7 @@ path: primary-election
                             </div>
                         </button>
                         <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + 1000 + 'px' : ''">
-                            <div class="p-6">
+                            <div class="p-6 pt-2">
                                 <p>
                                     I support a living wage. This means increasing the minimum wage and indexing it to inflation. We shouldn’t need an act of Congress to pay people more every time life gets more expensive. As an economist, I know that increasing the minimum wage helps the economy by pumping money into the marketplace, creating new revenue for businesses, and creating new jobs.
                                     I support paid sick and safe time, paid family leave, an increase of the working family tax credit, and extending the child tax credit that Congress recently allowed to expire because when working families do well, our economy and our communities do well.                    
@@ -74,7 +74,7 @@ path: primary-election
                             </div>
                         </button>
                         <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + 1000 + 'px' : ''">
-                            <div class="p-6">
+                            <div class="p-6 pt-2">
                                 <p>
                                     We must address student debt. The average student accumulates $30,000 of debt after four years of college, and the average starting salary with a four-year degree is $50,000. Fifty years ago, those figures would be $7,000 of debt and a $66,000 salary, adjusted for inflation.
                                     Minnesota is home to some of the best public colleges and universities in the country. Lack of wealth should not deter someone who wants to pursue higher education. We must make sure that public post-secondary education is affordable and accessible, whether that’s technical school, obtaining an associate’s degree, or earning a bachelor's degrees. People should not be saddled with a lifetime of crushing debt for pursuing a higher education.                    

@@ -19,10 +19,6 @@ path: 2022
             </h3>
         </div>
 
-        <picture class="photo_id">
-            <img src="\static\img\uploads\ArikForsman.webp">
-        </picture>
-
         <div class="container flex flex-row flex-wrap items-center mx-auto mb-2 lg:h-auto">
             {% if 2022_federal.items %}
                 {% for item in 2022_federal.items %}
@@ -42,7 +38,7 @@ path: 2022
                                     
                                     sizes=""
                                     
-                                    src="https://wip2--gentle-raindrop-054680.netlify.app/static/img/{{ item.raw }}" alt="{{ item.name }}" class="p-1 bg-white border photo_id">
+                                    src="https://wip2--gentle-raindrop-054680.netlify.app/static/img/{{ item.raw }}.webp" alt="{{ item.name }}" class="p-1 bg-white border photo_id">
 
                                 </picture>
                             </a>

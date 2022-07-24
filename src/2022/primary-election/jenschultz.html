@@ -28,16 +28,16 @@ path: primary-election
 
             <!-- ACCORDIAN -->
             <div class="container bg-white border border-gray-200 rounded-md mx-36">
-                <ul class="shadow-box">
+                <ul class="shadow-box" x-for="i,j,k in 4">
                     <li class="relative border-b border-gray-200" x-data="{selected:null}">
-                        <button type="button" class="w-full px-8 py-4 text-left rounded-t-md hover:bg-sky-600" @click="selected !== 0 ? selected = 0 : selected = null">
+                        <button type="button" class="w-full px-8 py-4 text-left rounded-t-md hover:bg-sky-600" @click="selected !== x-text='i' ? selected = x-text='y' : selected = null">
                             <div class="flex items-center justify-between">
                                 <span class="font-bold">
                                     Healthcare
                                 </span>
                             </div>
                         </button>
-                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 0 ? 'max-height: ' + 1000 + 'px' : ''">
+                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == x-text='z' ? 'max-height: ' + 1000 + 'px' : ''">
                             <div class="p-6 pt-2">
                                 <p>
                                     The rising cost of health care is one of the most important and urgent issues facing Minnesotans. Like many in our district, I am in favor of a single-payer system – what some call Medicare for All – that would dramatically cut down on costs associated with health insurance premiums and guarantee coverage for all Americans, regardless of income level.

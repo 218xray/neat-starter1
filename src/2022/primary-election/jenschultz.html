@@ -11,9 +11,6 @@ path: primary-election
             <article class="entry">
                 <div class="flex flex-col text-lg font-medium">
                     <p>I retired from Delta Airlines in Chisholm after 17 years with a union pension, and I live now on our hobby farm with my family in Warba, Minnesota.</p><p>The major issue in my bid for Congress should be affordable housing and property valuations. I support the I-35 rebuild in Duluth to reduce its size by half, giving more lake access and new housing potential with state and federal funding. The Department of Agriculture&#39;s no-money-down mortgages should be promoted for small towns, cities, and rural areas. HUD, the state, and nonprofits should be worked with for affordable housing.</p>
-                    <p>I am running for Congress because anyone picked out of the phone book at random could be doing a better job than Rep. Pete Stauber the past four years, with his votes against the economic interests of the 8th District in opposing the American Rescue Plan and infrastructure funding for schools, small businesses, child tax credits, 29 area airports, six iron mines, Duluth&#39;s Can-of Worms project, the cleanup of the St Louis River, and a critically important new lock in the Soo Locks that prevents an economic catastrophe to our grain and ore shipping if the large lock goes down.</p><p>Stauber has promoted low-cost drugs, a cap on insulin, broadband, infrastructure, and support for veterans — and then voted against them like a Libertarian who hates all government. He also voted against reasonable gun regulation, flying in sorely needed baby formula, and prohibitions against oil-price gouging.</p><p>Stauber&#39;s issues of inflation, Trump&#39;s wall, guns, and copper-nickel mining are wrongheaded.</p>
-                    <p>He voted against the Consumer Price Gouging Prevention Act in May, which was against oil-price gouging.</p><p>Josh Bivens of the Economic Policy Institute found that one-half of the price increases during the pandemic were due to higher profit margins for corporations. This correlates with other findings that oil companies made $75 billion in profits last year and corporate profits are at 70-year highs. Stauber should have held hearings via his Problem Solvers committee to address excess profits and supply issues, and not just blame others in office for political gain.</p><p>Trump&#39;s wall has been breached 3,000 times, the Washington Post reported, and it cost $21 million per mile to build, according to Reuters. Biden&#39;s wall is electronic, cheaper, and catching more people.</p><p>I favor Virginia Democratic Rep. Don Beyer&#39;s bill placing a 1,000% tax on AR-15-style weapons, as well as age limits and a buy-back program for assault weapons.</p><p>Trading 20 years of copper-nickel mining jobs for 500-plus years of pollution is crazy. Billions of tons of copper, nickel, cobalt, and manganese are obtainable on the bottom of the Pacific Ocean, lying as potato-sized nodules retrievable with crab-like robots, stingray-like robots, or crawler machines.</p><p>Nationally, the Republican platform advocates raising taxes on 60% of taxpayers and sunsetting Social Security, Medicare, and Medicaid in five years. This would crazy. See Florida Republican Sen. Rick Scott&#39;s 11-point plan, points five and six.</p><p>In addition, Stauber signed the Amicus Brief to the Texas lawsuit intended to delete the votes of four states and let Republican state legislatures choose Republican electors. This was an existential threat to overturning the popular vote, with Republicans attempting to use the “independent state legislature” theory to choose a Republican president in defiance of the actual vote.</p><p>I also oppose state Rep. Jen Schultz, a fellow Democratic candidate in this election for the 8th District, for apparently thinking copper-nickel mining can be done ecologically. I don&#39;t believe it can be.</p>
-                    <p>Abortion should be legal by pills only.</p><p>COVID-19 vaccines have saved lives and serious illness but should not be mandated or prescribed for children who aren&#39;t at risk of death.</p><p>On the trans issue, chemical and surgical interventions should be illegal for minors.</p><p>On a national level, President Joe Biden should invoke the Defense Production Act, making heat pumps and reducing fossil fuels; should push the USDA to provide an asparagopsis seaweed supplement to cattle, reducing the methane they produce; should cap the methane super-emitter wells in the Permian Basin; and should tariff or ban Brazilian imports.</p><p>With the looming food and fuel crises, we should reroute the booming LNG (liquified natural gas) exports to Asia back to the U.S. and Europe. Growing corn for ethanol is not ecological. Corn or grain should be grown on those acres for food.</p><p><b>John Munter of Warba, Minnesota, is running as a Democrat to represent Minnesota&#39;s 8th Congressional District.</b></p>
                 </div>
             </article>
             
@@ -81,6 +78,46 @@ path: primary-election
                                 </p>
                             </div>
                         </div>
+
+                        <button type="button" class="w-full px-8 py-4 text-left border-t-2 hover:bg-sky-600" @click="selected !== 2 ? selected = 2 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold">
+                                    Environmental
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + 1000 + 'px' : ''">
+                            <div class="p-6 pt-2">
+                                <h3>
+                                    Climate Change
+                                </h3>
+                                <p> 
+                                    Global climate change is affecting every part of the world, including Minnesota. In the last several years, Northern Minnesota has dealt with significant drought, massive forest fires and damaging floods. The science is clear: these issues will get worse unless we take urgent action.
+                                    I see an amazing opportunity for Northern Minnesota to be at the forefront of addressing climate change. We can be a global leader in environmental technology. There’s no reason for the US to continue to subsidize oil and gas companies to the tune of over $20 billion annually, especially when they’ve raised the price at the pump dramatically while enjoying record profits. Instead, we could direct that money toward building dependable green infrastructure that reduces our reliance on volatile, autocratic regimes.
+                                    Northern Minnesota is uniquely positioned to take advantage of a shift to green energy. Our highly skilled and experienced workforce would welcome an influx of stable, union jobs created through building and maintaining sustainable alternative energy infrastructure.
+                                    Global climate change is affecting every part of the world, including Minnesota. In the last several years, Northern Minnesota has dealt with significant drought, massive forest fires and damaging floods. The science is clear: these issues will get worse unless we take urgent action.I see an amazing opportunity for Northern Minnesota to be at the forefront of addressing climate change. We can be a global leader in environmental technology. There’s no reason for the US to continue to subsidize oil and gas companies to the tune of over $20 billion annually, especially when they’ve raised the price at the pump dramatically while enjoying record profits. Instead, we could direct that money toward building dependable green infrastructure that reduces our reliance on volatile, autocratic regimes.Northern Minnesota is uniquely positioned to take advantage of a shift to green energy. Our highly skilled and experienced workforce would welcome an influx of stable, union jobs created through building and maintaining sustainable alternative energy infrastructure.                    
+                                </p>
+                            </div>
+                        </div>
+
+                        <button type="button" class="w-full px-8 py-4 text-left border-t-2 hover:bg-sky-600" @click="selected !== 2 ? selected = 2 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold">
+                                    Infrastructure
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + 1000 + 'px' : ''">
+                            <div class="p-6 pt-2">
+                                <p>
+                                    Quality infrastructure is essential to our quality of life. It’s the roads and bridges we drive on, power lines that deliver electricity, and pipes that bring us clean water. Taking care of these essential elements of daily life is one of the most fundamental functions of government. 
+                                    The recent federal infrastructure bill is a great start, but we can do more. We must provide funding to address the basics of our traditional infrastructure like roads, bridges, water treatment and the electrical grid, as well as new infrastructure like broadband internet access.
+                                    Quality infrastructure is essential to our quality of life. It’s the roads and bridges we drive on, power lines that deliver electricity, and pipes that bring us clean water. Taking care of these essential elements of daily life is one of the most fundamental functions of government. The recent federal infrastructure bill is a great start, but we can do more. We must provide funding to address the basics of our traditional infrastructure like roads, bridges, water treatment and the electrical grid, as well as new infrastructure like broadband internet access.
+                                    Affordable housing
+                                </p>
+                            </div>
+                        </div>
+
                     </li>                                
                 </ul>
             </div>

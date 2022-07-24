@@ -54,7 +54,6 @@ path: primary-election
                                     It is easy to get lost in the details and in politics, but I never lose sight of the fact that, in the end, this is about real people facing some of the hardest and most terrifying experiences of their lives. Families should not have to worry that health care costs will ruin their finances in the wealthiest country in the world. Quality health care should be a right for all Americans.
                                 </p>
                             </div>
-                                                                                            <!-- selected = 3 OR selected = 3 AND 1 -->    
                         </div>
 
                         <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
@@ -74,6 +73,28 @@ path: primary-election
                             <div class="p-6">
                                 <p>
                                     I support paid sick and safe time, paid family leave, an increase of the working family tax credit, and extending the child tax credit that Congress recently allowed to expire because when working families do well, our economy and our communities do well.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 2 ? selected = 2 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <span>
+                                    Education
+                                </span>
+                                <svg x-show="!selected == 2" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- MINUS -->
+                                    <path class="heroicon-ui" d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm1-9h2a1 1 0 010 2h-2v2a1 1 0 01-2 0v-2H9a1 1 0 010-2h2V9a1 1 0 012 0v2z" />
+                                </svg>
+                                <svg x-show="selected == 2" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- PLUS -->
+                                    <path class="heroicon-ui" d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm4-8a1 1 0 01-1 1H9a1 1 0 010-2h6a1 1 0 011 1z" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + 1000 + 'px' : ''">
+                            <div class="p-6">
+                                <p>
+                                    We must address student debt. The average student accumulates $30,000 of debt after four years of college, and the average starting salary with a four-year degree is $50,000. Fifty years ago, those figures would be $7,000 of debt and a $66,000 salary, adjusted for inflation.
+                                    Minnesota is home to some of the best public colleges and universities in the country. Lack of wealth should not deter someone who wants to pursue higher education. We must make sure that public post-secondary education is affordable and accessible, whether that’s technical school, obtaining an associate’s degree, or earning a bachelor's degrees. People should not be saddled with a lifetime of crushing debt for pursuing a higher education.                    
                                 </p>
                             </div>
                         </div>

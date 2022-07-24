@@ -35,7 +35,7 @@ path: primary-election
                     <li class="relative border-b border-gray-200" x-data="{selected:null}">
                         <button type="button" class="w-full px-8 py-6 text-left hover:bg-sky-600" @click="selected !== 0 ? selected = 0 : selected = null">
                             <div class="flex items-center justify-between">
-                                <span>
+                                <span class="font-bold">
                                     Healthcare
                                 </span>
                             </div>
@@ -60,14 +60,15 @@ path: primary-election
                         <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + 1000 + 'px' : ''">
                             <div class="p-6">
                                 <p>
-                                    I support paid sick and safe time, paid family leave, an increase of the working family tax credit, and extending the child tax credit that Congress recently allowed to expire because when working families do well, our economy and our communities do well.
+                                    I support a living wage. This means increasing the minimum wage and indexing it to inflation. We shouldn’t need an act of Congress to pay people more every time life gets more expensive. As an economist, I know that increasing the minimum wage helps the economy by pumping money into the marketplace, creating new revenue for businesses, and creating new jobs.
+                                    I support paid sick and safe time, paid family leave, an increase of the working family tax credit, and extending the child tax credit that Congress recently allowed to expire because when working families do well, our economy and our communities do well.                    
                                 </p>
                             </div>
                         </div>
 
                         <button type="button" class="w-full px-8 py-6 text-left border-t-2 hover:bg-sky-600" @click="selected !== 2 ? selected = 2 : selected = null">
                             <div class="flex items-center justify-between">
-                                <span>
+                                <span class="font-bold">
                                     Education
                                 </span>
                             </div>

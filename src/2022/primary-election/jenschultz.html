@@ -56,20 +56,20 @@ path: primary-election
                             </div>
 
                                                                                             <!-- selected = 3 OR selected = 3 AND 1 -->
-                            <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 && 1 : selected = null">
+                            <button type="button" class="w-full px-8 py-6 text-left" x-data="{level:null}" @click="level !== 1 ? selected = 1 : level = null">
                                 <div class="flex items-center justify-between">
                                     <span>
                                         Economy
                                     </span>
-                                    <svg x-show="!selected == 3" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- MINUS -->
+                                    <svg x-show="!level == 1" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- MINUS -->
                                         <path class="heroicon-ui" d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm1-9h2a1 1 0 010 2h-2v2a1 1 0 01-2 0v-2H9a1 1 0 010-2h2V9a1 1 0 012 0v2z" />
                                     </svg>
-                                    <svg x-show="selected == 3" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- PLUS -->
+                                    <svg x-show="level == 1" class="fill-current" viewBox="0 0 24 24" width="24" height="24"> <!-- PLUS -->
                                         <path class="heroicon-ui" d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm4-8a1 1 0 01-1 1H9a1 1 0 010-2h6a1 1 0 011 1z" />
                                     </svg>
                                 </div>
                             </button>
-                            <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 3 && 1 ? 'max-height: ' + 1000 + 'px' : ''">
+                            <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="level == 1 ? 'max-height: ' + 1000 + 'px' : ''">
                                 <div class="p-6">
                                     <p>
                                         I support paid sick and safe time, paid family leave, an increase of the working family tax credit, and extending the child tax credit that Congress recently allowed to expire because when working families do well, our economy and our communities do well.

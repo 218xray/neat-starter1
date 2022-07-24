@@ -55,6 +55,7 @@ path: primary-election
                                 </p>
                             </div>
 
+                                                                                            <!-- selected = 3 OR selected = 3 AND 1 -->
                             <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 && 1 : selected = null">
                                 <div class="flex items-center justify-between">
                                     <span>
@@ -68,7 +69,7 @@ path: primary-election
                                     </svg>
                                 </div>
                             </button>
-                            <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 3 ? 'max-height: ' + 1000 + 'px' : ''">
+                            <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 3 && 1 ? 'max-height: ' + 1000 + 'px' : ''">
                                 <div class="p-6">
                                     <p>
                                         I support paid sick and safe time, paid family leave, an increase of the working family tax credit, and extending the child tax credit that Congress recently allowed to expire because when working families do well, our economy and our communities do well.

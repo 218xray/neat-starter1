@@ -28,16 +28,16 @@ path: primary-election
 
             <!-- ACCORDIAN -->
             <div class="container bg-white border border-gray-200 rounded-md mx-36">
-                <ul class="shadow-box" x-for="i,j,k in 4">
+                <ul class="shadow-box">
                     <li class="relative border-b border-gray-200" x-data="{selected:null}">
-                        <button type="button" class="w-full px-8 py-4 text-left rounded-t-md hover:bg-sky-600" @click="selected !== x-text='i' ? selected = x-text='y' : selected = null">
+                        <button type="button" class="w-full px-8 py-4 text-left rounded-t-md hover:bg-sky-600" @click="selected !== 0 ? selected = 0 : selected = null">
                             <div class="flex items-center justify-between">
                                 <span class="font-bold">
                                     Healthcare
                                 </span>
                             </div>
                         </button>
-                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == x-text='z' ? 'max-height: ' + 1000 + 'px' : ''">
+                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 0 ? 'max-height: ' + 1000 + 'px' : ''">
                             <div class="p-6 pt-2">
                                 <p>
                                     The rising cost of health care is one of the most important and urgent issues facing Minnesotans. Like many in our district, I am in favor of a single-payer system – what some call Medicare for All – that would dramatically cut down on costs associated with health insurance premiums and guarantee coverage for all Americans, regardless of income level.
@@ -114,6 +114,36 @@ path: primary-election
                                     The recent federal infrastructure bill is a great start, but we can do more. We must provide funding to address the basics of our traditional infrastructure like roads, bridges, water treatment and the electrical grid, as well as new infrastructure like broadband internet access.
                                     Quality infrastructure is essential to our quality of life. It’s the roads and bridges we drive on, power lines that deliver electricity, and pipes that bring us clean water. Taking care of these essential elements of daily life is one of the most fundamental functions of government. The recent federal infrastructure bill is a great start, but we can do more. We must provide funding to address the basics of our traditional infrastructure like roads, bridges, water treatment and the electrical grid, as well as new infrastructure like broadband internet access.
                                     Affordable housing
+                                </p>
+                            </div>
+                        </div>
+
+                        <button type="button" class="w-full px-8 py-4 text-left border-t-2 hover:bg-sky-600" @click="selected !== 5 ? selected = 5 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold">
+                                    Social
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 5 ? 'max-height: ' + 1000 + 'px' : ''">
+                            <div class="p-6 pt-2">
+                                <p>
+                                    The Supreme Court decision to overturn Roe v Wade was wrong and will harm millions of people. It’s a fundamental right for every person to make their own health decisions with their doctor, not politicians. We must mobilize, organize, and elect representatives who will fight for our right to choose and codify these long-held protections into law.Reproductive health and freedom is about more than access to safe and legal abortion.  We need to ensure folks have hassle-free access to contraception and quality sex education. Our LGBTQ+ community, and especially the transgender community, must have access to healthcare that covers gender-affirming care.In Congress, I will fight to prevent us from going back to a time when access to quality reproductive care was only available to the wealthy.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button type="button" class="w-full px-8 py-4 text-left border-t-2 hover:bg-sky-600" @click="selected !== 6 ? selected = 6 : selected = null">
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold">
+                                    Veterans
+                                </span>
+                            </div>
+                        </button>
+                        <div class="relative overflow-hidden transition-all duration-400 max-h-0" x-ref="container1" x-bind:style="selected == 6 ? 'max-height: ' + 1000 + 'px' : ''">
+                            <div class="p-6 pt-2">
+                                <p>
+                                    Our veterans deserve our utmost respect and admiration.They put their personal safety—and future—at risk to protect ours. They stand up for us with courage and patriotism. We must stand up for them.The Veterans Administration has been hollowed out, understaffed, and under-resourced. That must be reversed. The backlogs and long delays for medical and other services must be eliminated, and that means repairing and modernizing our veterans services. Higher and technical education opportunities must be assured and counseling services be made readily available, linking veterans to these opportunities and preparing them for good jobs in the civilian world. Access to adequate housing needs to be supported. Special attention needs to be paid to services dealing with PTSD, depression, and traumatic brain injuries.Veterans Courts at the local level should be encouraged so that there are legal, chemical dependency, probation, and other services working as a team to help struggling veterans caught up in the justice system. We must make sure that the spouses and children of our active veterans have good housing, support services, and income, and that widows or widowers and children of heroes who lose their lives in the nation’s service are well provided for. Disabled vets and their families must receive the best possible care and support.
                                 </p>
                             </div>
                         </div>

@@ -1,12 +1,4 @@
 ---
 items:
-  - text: Menu One
-    url: "#"
-  - text: Menu Two
-    url: "#"
-  - text: Menu Three
-    url: "#"
-  - text: Blog
-    url: "/blog"
   - text: 2022 Primary Election
     url: "/2022/primary-election"
